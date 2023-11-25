@@ -73,7 +73,7 @@ begin
     -- Transposição da matriz X
     transpose_x: MatrixTranspose port map(
         a11 => x11, a12 => x12, a21 => x21, a22 => x22,
-        b11 => xt11, b12 => xt21, b21 => xt12, b22 => xt22
+        b11 => xt11, b12 => xt12, b21 => xt21, b22 => xt22
     );
 
     -- Multiplicação X^T * X

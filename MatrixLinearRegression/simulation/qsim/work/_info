@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/22.1std/projects/MatrixLinearRegression/simulation/qsim
+Ematrixlinearregression
+Z1 w1700942781
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+R0
+Z9 8MatrixLinearRegression.vho
+Z10 FMatrixLinearRegression.vho
+l0
+L37
+VzSbo7DZedWNAALmIA]VTJ0
+!s100 __AO<M3[92ecbzVWXJ1gk1
+Z11 OV;C;10.5b;63
+32
+!s110 1700942782
+!i10b 1
+Z12 !s108 1700942782.000000
+Z13 !s90 -work|work|MatrixLinearRegression.vho|
+Z14 !s107 MatrixLinearRegression.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 22 matrixlinearregression 0 22 zSbo7DZedWNAALmIA]VTJ0
+l13657
+L50
+V5?=j[h0]1Y>^ZRQl15eMm0
+!s100 YF7WzWi`>@?]`SaV8QbHo3
+R11
+32
+!s110 1700942783
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ematrixlinearregression_vhd_vec_tst
+Z17 w1700942779
+R6
+R7
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+VUkjOnATfKd2dPH@5GlMKi0
+!s100 Sgj1RcFhgU9I21Qo7H5O]0
+R11
+32
+Z20 !s110 1700942784
+!i10b 1
+Z21 !s108 1700942784.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Amatrixlinearregression_arch
+R6
+R7
+Z24 DEx4 work 34 matrixlinearregression_vhd_vec_tst 0 22 UkjOnATfKd2dPH@5GlMKi0
+l57
+L34
+V0`;c49fIk5YnfRFSObOBG1
+!s100 SjPcLbN0L:5;TM7oLVTV;1
+R11
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R15
+R16
