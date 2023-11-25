@@ -34,10 +34,10 @@ begin
     begin
         if det /= 0 then
             -- Cálculo da matriz inversa
-            a_out <= std_logic_vector(to_signed(d / det, 16));
-            b_out <= std_logic_vector(to_signed(-b / det, 16));
-            c_out <= std_logic_vector(to_signed(-c / det, 16));
-            d_out <= std_logic_vector(to_signed(a / det, 16));
+            a_out <= std_logic_vector(to_signed(2 * d / det, 16));
+            b_out <= std_logic_vector(to_signed(2 * (-b) / det, 16));
+            c_out <= std_logic_vector(to_signed(2 * (-c) / det, 16));
+            d_out <= std_logic_vector(to_signed(2 * a / det, 16));
         else
             -- Matriz não invertível
             a_out <= (others => '0');
