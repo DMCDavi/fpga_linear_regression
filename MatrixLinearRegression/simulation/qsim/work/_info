@@ -17,23 +17,23 @@ Z5 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
-R0
-Z9 8MatrixLinearRegression.vho
-Z10 FMatrixLinearRegression.vho
+Z9 dD:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/simulation/qsim
+Z10 8MatrixLinearRegression.vho
+Z11 FMatrixLinearRegression.vho
 l0
 L37
 VzSbo7DZedWNAALmIA]VTJ0
 !s100 __AO<M3[92ecbzVWXJ1gk1
-Z11 OV;C;10.5b;63
+Z12 OV;C;10.5b;63
 32
-!s110 1700942782
+Z13 !s110 1701209811
 !i10b 1
-Z12 !s108 1700942782.000000
-Z13 !s90 -work|work|MatrixLinearRegression.vho|
-Z14 !s107 MatrixLinearRegression.vho|
+Z14 !s108 1701209811.000000
+Z15 !s90 -work|work|MatrixLinearRegression.vho|
+Z16 !s107 MatrixLinearRegression.vho|
 !i113 1
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -47,52 +47,52 @@ l13657
 L50
 V5?=j[h0]1Y>^ZRQl15eMm0
 !s100 YF7WzWi`>@?]`SaV8QbHo3
-R11
-32
-!s110 1700942783
-!i10b 1
 R12
+32
 R13
+!i10b 1
 R14
-!i113 1
 R15
 R16
+!i113 1
+R17
+R18
 Ematrixlinearregression_vhd_vec_tst
-Z17 w1700942779
+Z19 w1700942779
 R6
 R7
-R0
-Z18 8Waveform.vwf.vht
-Z19 FWaveform.vwf.vht
+R9
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
 l0
 L32
 VUkjOnATfKd2dPH@5GlMKi0
 !s100 Sgj1RcFhgU9I21Qo7H5O]0
-R11
+R12
 32
-Z20 !s110 1700942784
+Z22 !s110 1701209813
 !i10b 1
-Z21 !s108 1700942784.000000
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z23 !s108 1701209812.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
 !i113 1
-R15
-R16
+R17
+R18
 Amatrixlinearregression_arch
 R6
 R7
-Z24 DEx4 work 34 matrixlinearregression_vhd_vec_tst 0 22 UkjOnATfKd2dPH@5GlMKi0
+Z26 DEx4 work 34 matrixlinearregression_vhd_vec_tst 0 22 UkjOnATfKd2dPH@5GlMKi0
 l57
 L34
-V0`;c49fIk5YnfRFSObOBG1
-!s100 SjPcLbN0L:5;TM7oLVTV;1
-R11
+Z27 V0`;c49fIk5YnfRFSObOBG1
+Z28 !s100 SjPcLbN0L:5;TM7oLVTV;1
+R12
 32
-R20
-!i10b 1
-R21
 R22
+!i10b 1
 R23
+R24
+R25
 !i113 1
-R15
-R16
+R17
+R18

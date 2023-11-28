@@ -1,18 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.newtype.all;
 
 entity MatrixInverter is
     Port (
-        a_in : in STD_LOGIC_VECTOR(15 downto 0); -- Elemento a da matriz
-        b_in : in STD_LOGIC_VECTOR(15 downto 0); -- Elemento b
-        c_in : in STD_LOGIC_VECTOR(15 downto 0); -- Elemento c
-        d_in : in STD_LOGIC_VECTOR(15 downto 0); -- Elemento d
-        -- Saídas para a matriz invertida
-        a_out : out STD_LOGIC_VECTOR(15 downto 0); -- Elemento a'
-        b_out : out STD_LOGIC_VECTOR(15 downto 0); -- Elemento b'
-        c_out : out STD_LOGIC_VECTOR(15 downto 0); -- Elemento c'
-        d_out : out STD_LOGIC_VECTOR(15 downto 0)  -- Elemento d'
+        A_in : in matrix_type;  -- Entrada da Matriz
+        A_out : out matrix_type -- Saída da Matriz Invertida
     );
 end MatrixInverter;
 
@@ -21,10 +15,10 @@ architecture Behavioral of MatrixInverter is
     signal det : integer;
 begin
     -- Conversão de entrada
-    a <= to_integer(signed(a_in));
-    b <= to_integer(signed(b_in));
-    c <= to_integer(signed(c_in));
-    d <= to_integer(signed(d_in));
+    a <= to_integer(signed(A_in(1, 1)));
+    b <= to_integer(signed(A_in(1, 2)));
+    c <= to_integer(signed(A_in(2, 1)));
+    d <= to_integer(signed(A_in(2, 2)));
 
     -- Cálculo do determinante
     det <= a * d - b * c;
@@ -34,16 +28,13 @@ begin
     begin
         if det /= 0 then
             -- Cálculo da matriz inversa
-            a_out <= std_logic_vector(to_signed(2 * d / det, 16));
-            b_out <= std_logic_vector(to_signed(2 * (-b) / det, 16));
-            c_out <= std_logic_vector(to_signed(2 * (-c) / det, 16));
-            d_out <= std_logic_vector(to_signed(2 * a / det, 16));
+            A_out(1, 1) <= std_logic_vector(to_signed(2*d / det, 16));
+            A_out(1, 2) <= std_logic_vector(to_signed(2*(-b) / det, 16));
+            A_out(2, 1) <= std_logic_vector(to_signed(2*(-c) / det, 16));
+            A_out(2, 2) <= std_logic_vector(to_signed(2*a / det, 16));
         else
-            -- Matriz não invertível
-            a_out <= (others => '0');
-            b_out <= (others => '0');
-            c_out <= (others => '0');
-            d_out <= (others => '0');
+            -- Matriz não invertível, setar todos os elementos para zero
+            A_out <= (others => (others => (others => '0')));
         end if;
     end process;
 end Behavioral;
