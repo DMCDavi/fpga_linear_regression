@@ -9,76 +9,82 @@ package newtype is
 	 type int_matrix_type is array (1 to 2, 1 to 2) of integer;
 end newtype;
 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 use work.newtype.all;
 
 entity MatrixLinearRegression is
-    Port (
-        X : in matrix_type;   -- Matriz X
-        Y : in matrix_type;   -- Vetor Y
-        B : out matrix_type   -- Resultado vetor B
-    );
+	PORT(
+		clk		:	IN		STD_LOGIC;										--system clock
+		reset		:	IN		STD_LOGIC;										--ascynchronous reset
+		rx			:	IN		STD_LOGIC;										--receive pin
+		tx			:	OUT	STD_LOGIC;
+		rx_ready_t:OUT	STD_LOGIC;
+		tx_busy_t :OUT	STD_LOGIC);										--transmit pin
+		
 end MatrixLinearRegression;
 
 architecture Behavioral of MatrixLinearRegression is
-
-    -- Atualizando as definições dos componentes para usar arrays
-    component MatrixTranspose
+    -- Adicionando o componente SerialUartCommunication
+    component SerialUartCommunication
         Port (
-            A : in matrix_type;
-            B : out matrix_type
+			clk		:	IN		STD_LOGIC;										--system clock
+			reset_n	:	IN		STD_LOGIC;										--ascynchronous reset
+			tx_ena	:	IN		STD_LOGIC;										--initiate transmission
+			tx_data	:	IN		STD_LOGIC_VECTOR(7 DOWNTO 0);  --data to transmit
+			rx			:	IN		STD_LOGIC;										--receive pin
+			rx_busy, rx_ready, os_pulse_out	:	OUT	STD_LOGIC;										--data reception in progress
+			rx_error	:	OUT	STD_LOGIC;										--start, parity, or stop bit error detected
+			rx_data	:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 0);	--data received
+			tx_busy	:	OUT	STD_LOGIC;  									--transmission in progress
+			tx			:	OUT	STD_LOGIC
         );
     end component;
-
-    component MatrixMultiplier
+	 
+	 component MatrixOperations
         Port (
-            A : in matrix_type;
-            B : in matrix_type;
-            C : out matrix_type
-        );
+			  X : in matrix_type;   -- Matriz X
+			  Y : in matrix_type;   -- Vetor Y
+			  B : out matrix_type   -- Resultado vetor B
+		  );
     end component;
 
-    component MatrixInverter
-        Port (
-            A_in : in matrix_type;
-            A_out : out matrix_type
-        );
-    end component;
+    signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
+    signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
+    signal tx_busy, tx_start, rx_ready : STD_LOGIC;
 
-    -- Sinais intermediários
-    signal XT, XTX, Inv, XTY : matrix_type;
-
+    -- Sinais para a matriz X e Y
+	 signal X, Y, B : matrix_type;
+	 signal teste: STD_LOGIC_VECTOR(7 DOWNTO 0);
 begin
-    -- Transposição da matriz X
-    transpose_x: MatrixTranspose port map(
-        A => X,
-        B => XT
-    );
 
-    -- Multiplicação X^T * X
-    multiply_xtx: MatrixMultiplier port map(
-        A => XT,
-        B => X,
-        C => XTX
+    uart_comm: SerialUartCommunication port map(
+        clk => clk,
+		  reset_n => reset,
+        rx => rx,
+        tx => tx,
+        rx_data => rx_data,
+        tx_data => tx_data,
+        rx_ready => rx_ready,
+        tx_ena => tx_start,
+        tx_busy => tx_busy
     );
-
-    -- Inversão de X^T * X
-    invert_xtx: MatrixInverter port map(
-        A_in => XTX,
-        A_out => Inv
-    );
-
-    -- Multiplicação X^T * Y (adaptando Y para ser uma matriz 2x2)
-    multiply_xty: MatrixMultiplier port map(
-        A => XT,
-        B => Y,  -- Transformando Y em uma matriz 2x2
-        C => XTY
-    );
-
-    -- Multiplicação final (X^T * X)^-1 * (X^T * Y)
-    final_multiply: MatrixMultiplier port map(
-        A => Inv,
-        B => XTY,
-        C => B  -- Apenas as primeiras linhas de C são relevantes para o vetor B
-    );
+rx_ready_t <= rx_ready;
+tx_busy_t <= tx_busy;
+    process(clk, rx_ready)
+    begin
+        if rising_edge(clk) then
+            if rx_ready = '1' then
+					if tx_busy = '0' then
+                teste <= rx_data;
+                tx_data <= teste;
+                tx_start <= '1';
+					 end if;
+            else
+                tx_start <= '0';
+            end if;
+        end if;
+    end process;
 
 end Behavioral;

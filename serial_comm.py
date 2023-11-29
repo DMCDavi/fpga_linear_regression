@@ -18,7 +18,7 @@ if not ser.isOpen():
 try:
     while True:
         # Prepare data to be sent
-        data_to_send = '20'  # Replace with your data
+        data_to_send = '23'  # Replace with your data
 
         encoded_data = data_to_send.encode()
 

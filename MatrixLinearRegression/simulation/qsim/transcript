@@ -1,7 +1,7 @@
 # do MatrixLinearRegression.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:16:51 on Nov 28,2023
+# Start time: 15:18:23 on Nov 29,2023
 # vcom -work work MatrixLinearRegression.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,109 +13,468 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity MatrixLinearRegression
 # -- Compiling architecture structure of MatrixLinearRegression
-# End time: 19:16:52 on Nov 28,2023, Elapsed time: 0:00:01
+# End time: 15:18:23 on Nov 29,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:16:52 on Nov 28,2023
-# vcom -work work Waveform.vwf.vht 
+# Start time: 15:18:23 on Nov 29,2023
+# vcom -work work Waveform1.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MatrixLinearRegression_vhd_vec_tst
 # -- Compiling architecture MatrixLinearRegression_arch of MatrixLinearRegression_vhd_vec_tst
-# End time: 19:16:53 on Nov 28,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MatrixLinearRegression_vhd_vec_tst 
-# Start time: 19:16:53 on Nov 28,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.matrixlinearregression_vhd_vec_tst(matrixlinearregression_arch)
-# Loading altera_lnsim.altera_lnsim_components
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cyclonev.cyclonev_atom_pack(body)
-# Loading cyclonev.cyclonev_components
-# Loading work.matrixlinearregression(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading cyclonev.cyclonev_io_obuf(arch)
-# Loading cyclonev.cyclonev_io_ibuf(arch)
-# Loading cyclonev.cyclonev_mac(behavior)
-# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult2~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult2~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult3~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult3~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult1~477\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult1~477\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult6~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult6~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult7~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult7~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult0~349\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult0~349\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: Design size of 1065967 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#34
-# End time: 19:16:57 on Nov 28,2023, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 37
+# ** Error: Waveform1.vwf.vht(37): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(38): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(39): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(40): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(41): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(42): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(43): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(44): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(45): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(46): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(47): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(48): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(49): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(50): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(51): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(52): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(53): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(54): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(55): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(56): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(57): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(58): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(59): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(60): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(61): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(62): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(63): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(64): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(65): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(66): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(67): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(68): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(69): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(70): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(71): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(72): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(73): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(74): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(75): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(76): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(77): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(78): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(79): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(80): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(81): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(82): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(83): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(84): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(85): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(86): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(87): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(88): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(89): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(90): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(91): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(92): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(93): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(94): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(95): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(96): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(97): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(98): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(99): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(100): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(101): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(102): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(103): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(104): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(105): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(106): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(107): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(108): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(109): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(110): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(111): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(112): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(113): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(114): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(115): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(116): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(117): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(118): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(119): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(120): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(121): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(122): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(123): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(124): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(125): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(126): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(127): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(128): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(129): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(130): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(131): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(132): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(133): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(134): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(135): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(136): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(137): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(138): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(139): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(140): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(141): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(142): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(143): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(144): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(145): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(146): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(147): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(148): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(149): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(150): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(151): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(152): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(153): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(154): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(155): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(156): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(157): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(158): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(159): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(160): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(161): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(162): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(163): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(164): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(165): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(166): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(167): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(168): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(169): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(170): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(171): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(172): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(173): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(174): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(175): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(176): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(177): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(178): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(179): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(180): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(181): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(182): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(183): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(184): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(185): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(186): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(187): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(188): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(189): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(190): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(191): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(192): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(193): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(194): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(195): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(196): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(197): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(198): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(199): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(200): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(201): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(202): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(203): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(204): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(205): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(206): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(207): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(208): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(209): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(210): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(211): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(212): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(213): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(214): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(215): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(216): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(217): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(218): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(219): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(220): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(221): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(222): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(223): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(224): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(225): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(226): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(227): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(228): near "[": (vcom-1576) expecting ':'.
+# ** Error: Waveform1.vwf.vht(429): near "1": (vcom-1576) expecting ']'.
+# ** Error: Waveform1.vwf.vht(624): Statement cannot be labeled.
+# ** Error: Waveform1.vwf.vht(626): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(626): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(633): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(633): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(640): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(640): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(647): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(647): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(654): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(654): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(661): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(661): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(668): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(668): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(675): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(675): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(682): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(682): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(689): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(689): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(696): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(696): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(703): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(703): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(710): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(710): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(717): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(717): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(724): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(724): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(731): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(731): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(738): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(738): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(745): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(745): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(752): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(752): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(759): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(759): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(766): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(766): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(773): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(773): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(780): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(780): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(787): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(787): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(794): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(794): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(801): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(801): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(808): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(808): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(815): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(815): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(822): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(822): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(829): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(829): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(836): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(836): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(843): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(843): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(850): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(850): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(857): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(857): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(864): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(864): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(871): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(871): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(878): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(878): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(885): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(885): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(892): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(892): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(899): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(899): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(906): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(906): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(913): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(913): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(920): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(920): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(927): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(927): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(934): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(934): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(941): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(941): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(948): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(948): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(955): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(955): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(962): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(962): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(969): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(969): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(976): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(976): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(983): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(983): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(990): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(990): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(997): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(997): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1004): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1004): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1011): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1011): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1018): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1018): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1025): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1025): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1032): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1032): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1039): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1039): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1046): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1046): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1053): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1053): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1060): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1060): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1067): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1067): (vcom-1136) Unknown identifier "X".
+# ** Error: Waveform1.vwf.vht(1074): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1074): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1081): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1081): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1088): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1088): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1095): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1095): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1102): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1102): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1109): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1109): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1116): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1116): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1123): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1123): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1130): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1130): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1137): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1137): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1144): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1144): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1151): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1151): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1158): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1158): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1165): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1165): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1172): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1172): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1179): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1179): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1186): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1186): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1193): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1193): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1200): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1200): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1207): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1207): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1214): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1214): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1221): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1221): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1228): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1228): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1235): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1235): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1242): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1242): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1249): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1249): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1256): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1256): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1263): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1263): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1270): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1270): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1277): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1277): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1284): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1284): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1291): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1291): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1298): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1298): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1305): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1305): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1312): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1312): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1319): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1319): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1326): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1326): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1333): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1333): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1340): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1340): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1347): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1347): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1354): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1354): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1361): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1361): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1368): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1368): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1375): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1375): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1382): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1382): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1389): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1389): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1396): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1396): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1403): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1403): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1410): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1410): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1417): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1417): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1424): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1424): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1431): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1431): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1438): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1438): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1445): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1445): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1452): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1452): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1459): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1459): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1466): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1466): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1473): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1473): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1480): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1480): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1487): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1487): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1494): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1494): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1501): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1501): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1508): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1508): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1515): Illegal target for signal assignment.
+# ** Error: Waveform1.vwf.vht(1515): (vcom-1136) Unknown identifier "Y".
+# ** Error: Waveform1.vwf.vht(1518): VHDL Compiler exiting
+# End time: 15:18:23 on Nov 29,2023, Elapsed time: 0:00:00
+# Errors: 451, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./MatrixLinearRegression.do line 4

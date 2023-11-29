@@ -4,6 +4,9 @@ use IEEE.NUMERIC_STD.ALL;
 use work.newtype.all;
 
 entity MatrixInverter is
+    generic (
+        N : integer := 2 -- Tamanho da matriz NxN
+    );
     Port (
         A_in : in matrix_type;  -- Entrada da Matriz
         A_out : out matrix_type -- Saída da Matriz Invertida
@@ -11,30 +14,55 @@ entity MatrixInverter is
 end MatrixInverter;
 
 architecture Behavioral of MatrixInverter is
-    signal a, b, c, d : integer;
-    signal det : integer;
+    signal A_int : int_matrix_type;
+    signal I_int : int_matrix_type;
 begin
-    -- Conversão de entrada
-    a <= to_integer(signed(A_in(1, 1)));
-    b <= to_integer(signed(A_in(1, 2)));
-    c <= to_integer(signed(A_in(2, 1)));
-    d <= to_integer(signed(A_in(2, 2)));
-
-    -- Cálculo do determinante
-    det <= a * d - b * c;
-
-    -- Verificar se a matriz é invertível (det != 0)
-    process(a, b, c, d)
+    -- Processo de inversão de matriz (Método de Gauss-Jordan)
+    matrix_inversion: process(A_in, A_int, I_int)
+	     variable temp : integer;
+		  variable factor : integer;
     begin
-        if det /= 0 then
-            -- Cálculo da matriz inversa
-            A_out(1, 1) <= std_logic_vector(to_signed(2*d / det, 16));
-            A_out(1, 2) <= std_logic_vector(to_signed(2*(-b) / det, 16));
-            A_out(2, 1) <= std_logic_vector(to_signed(2*(-c) / det, 16));
-            A_out(2, 2) <= std_logic_vector(to_signed(2*a / det, 16));
-        else
-            -- Matriz não invertível, setar todos os elementos para zero
-            A_out <= (others => (others => (others => '0')));
-        end if;
-    end process;
+	     -- Inicialização da matriz de identidade
+		  for i in 1 to N loop
+			   for j in 1 to N loop
+				 	 I_int(i, j) <= 0;
+			   end loop;
+			   I_int(i, i) <= 1;
+		  end loop;
+	 
+	     -- Conversão de entrada
+		  for i in 1 to N loop
+			   for j in 1 to N loop
+					 A_int(i, j) <= to_integer(signed(A_in(i, j)));
+			   end loop;
+		  end loop;
+	 
+        for i in 1 to N loop
+            -- Dividir a linha i pela diagonal A_int(i, i)
+            temp := A_int(i, i);
+            for j in 1 to N loop
+                A_int(i, j) <= A_int(i, j) / temp;
+                I_int(i, j) <= I_int(i, j) / temp;
+            end loop;
+
+            -- Tornar todos os outros elementos da coluna i zeros
+            for k in 1 to N loop
+                if k /= i then
+                    factor := A_int(k, i);
+                    for j in 1 to N loop
+                        A_int(k, j) <= A_int(k, j) - factor * A_int(i, j);
+                        I_int(k, j) <= I_int(k, j) - factor * I_int(i, j);
+                    end loop;
+                end if;
+            end loop;
+        end loop;
+
+        -- Conversão para saída
+        for i in 1 to N loop
+            for j in 1 to N loop
+                A_out(i, j) <= std_logic_vector(to_signed(I_int(i, j), 16));
+            end loop;
+        end loop;
+    end process matrix_inversion;
+
 end Behavioral;
