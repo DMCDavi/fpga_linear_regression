@@ -1,5 +1,5 @@
 Flow report for MatrixLinearRegression
-Thu Nov 30 10:44:24 2023
+Thu Nov 30 17:09:31 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 30 10:44:24 2023          ;
+; Flow Status                     ; Successful - Thu Nov 30 17:09:31 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CEBA4F23C7                                    ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 94 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 178                                            ;
-; Total pins                      ; 11 / 224 ( 5 % )                               ;
+; Logic utilization (in ALMs)     ; 1,043 / 18,480 ( 6 % )                         ;
+; Total registers                 ; 290                                            ;
+; Total pins                      ; 13 / 224 ( 6 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                                 ;
+; Total DSP Blocks                ; 8 / 66 ( 12 % )                                ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 11/30/2023 10:43:29    ;
+; Start date & time ; 11/30/2023 17:05:51    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; MatrixLinearRegression ;
 +-------------------+------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 9447189936744.170135180904648          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 9447189936744.170137475119352          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -89,6 +89,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -101,12 +102,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4904 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:33     ; 1.0                     ; 6439 MB             ; 00:00:43                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4861 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5115 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4730 MB             ; 00:00:01                           ;
-; Total                ; 00:00:50     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4928 MB             ; 00:00:26                           ;
+; Fitter               ; 00:03:02     ; 1.1                     ; 6440 MB             ; 00:03:52                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4864 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:09     ; 2.1                     ; 5139 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4744 MB             ; 00:00:01                           ;
+; Total                ; 00:03:36     ; --                      ; --                  ; 00:04:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

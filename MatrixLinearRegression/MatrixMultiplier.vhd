@@ -34,6 +34,7 @@ begin
             process(a_int, b_int)
             variable sum : integer := 0;
             begin
+					 sum := 0;
                 for k in 1 to M loop
                     sum := sum + a_int(i, k) * b_int(k, j);
                 end loop;
@@ -45,7 +46,7 @@ begin
     -- Conversão para saída
     loop_output: for i in 1 to N generate
         loop_output_1: for j in 1 to P generate
-            C(i, j) <= std_logic_vector(to_signed(c_int(i, j), 16));
+            C(i, j) <= std_logic_vector(to_signed(c_int(i, j), 8));
         end generate loop_output_1;
     end generate loop_output;
 end Behavioral;

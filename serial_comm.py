@@ -7,8 +7,7 @@ ser = serial.Serial(
     baudrate=115200,  # Set baud rate
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
-    timeout=10
+    bytesize=serial.EIGHTBITS
 )
 
 # Open the serial port if it's not already open
@@ -17,25 +16,21 @@ if not ser.isOpen():
 
 try:
     while True:
-        # Prepare data to be sent
-        data_to_send = '73'  # Replace with your data
+        # Prepare data to be sent - agora como um número de 8 bits
+        data_to_send = [1,2,2,3,4,4]  # Replace with your 8-bit integer data (0-255)
 
-        encoded_data = data_to_send.encode()
+        for num in data_to_send:
+            # Convertendo o número inteiro de 8 bits em um único byte
+            encoded_data = num.to_bytes(1, byteorder='big')
 
-        for byte in encoded_data:
-            # Convertendo cada byte em uma string binária
-            binary_representation = format(byte, '08b')
-            print(binary_representation)
-        # Send data
-        ser.write(encoded_data)
+            for byte in encoded_data:
+                # Convertendo cada byte em uma string binária
+                binary_representation = format(byte, '08b')
+                print(binary_representation)
 
-        # Receiving data
-        if ser.inWaiting() > 0:
-            incoming_data = ser.readline()
-            print("Received:", incoming_data.decode().strip())
+            # Send data
+            ser.write(encoded_data)
 
-        # Wait a bit before sending the next data
-        time.sleep(10)
 except KeyboardInterrupt:
     # Close the port when done
     ser.close()

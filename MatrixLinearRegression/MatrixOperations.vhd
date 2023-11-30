@@ -64,13 +64,14 @@ begin
         A => XT,
         B => Y,  -- Transformando Y em uma matriz 2x2
         C => XTY
-    );
+	);
 
     -- Multiplicação final (X^T * X)^-1 * (X^T * Y)
-    final_multiply: MatrixMultiplier port map(
-        A => Inv,
-        B => XTY,
-        C => B  -- Apenas as primeiras linhas de C são relevantes para o vetor B
-    );
+    --final_multiply: MatrixMultiplier port map(
+    --    A => Inv,
+    --    B => XTY,
+    --    C => B  -- Apenas as primeiras linhas de C são relevantes para o vetor B
+    --);
+	 B <= XTX;
 
 end Behavioral;
