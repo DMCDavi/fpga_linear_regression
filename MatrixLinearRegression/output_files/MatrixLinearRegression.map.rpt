@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MatrixLinearRegression
-Wed Nov 29 17:21:25 2023
+Thu Nov 30 10:43:38 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,14 +14,16 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_state
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: SerialUartCommunication:uart_comm
- 13. Port Connectivity Checks: "SerialUartCommunication:uart_comm"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: SerialUartCommunication:uart_comm
+ 15. Port Connectivity Checks: "SerialUartCommunication:uart_comm"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +50,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 29 17:21:25 2023          ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 30 10:43:38 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 78                                             ;
-; Total pins                      ; 6                                              ;
+; Total registers                 ; 145                                            ;
+; Total pins                      ; 11                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -172,14 +174,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
-; MatrixLinearRegression.vhd       ; yes             ; User VHDL File  ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd  ;         ;
-; SerialUartCommunication.vhd      ; yes             ; User VHDL File  ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
+; MatrixLinearRegression.vhd       ; yes             ; User VHDL File        ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd  ;         ;
+; SerialUartCommunication.vhd      ; yes             ; User VHDL File        ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd ;         ;
+; frequencydivider.vhd             ; yes             ; Auto-Found VHDL File  ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd        ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -187,25 +190,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 45        ;
+; Estimate of Logic utilization (ALMs needed) ; 96        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 62        ;
+; Combinational ALUT usage for logic          ; 164       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 9         ;
-;     -- 5 input functions                    ; 14        ;
+;     -- 6 input functions                    ; 24        ;
+;     -- 5 input functions                    ; 16        ;
 ;     -- 4 input functions                    ; 8         ;
-;     -- <=3 input functions                  ; 31        ;
+;     -- <=3 input functions                  ; 116       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 78        ;
+; Dedicated logic registers                   ; 145       ;
 ;                                             ;           ;
-; I/O pins                                    ; 6         ;
+; I/O pins                                    ; 11        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 78        ;
-; Total fan-out                               ; 501       ;
-; Average fan-out                             ; 3.30      ;
+; Maximum fan-out                             ; 66        ;
+; Total fan-out                               ; 962       ;
+; Average fan-out                             ; 2.91      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,8 +217,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name             ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------------------+--------------+
-; |MatrixLinearRegression                ; 62 (2)              ; 78 (17)                   ; 0                 ; 0          ; 6    ; 0            ; |MatrixLinearRegression                                   ; MatrixLinearRegression  ; work         ;
-;    |SerialUartCommunication:uart_comm| ; 60 (60)             ; 61 (61)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|SerialUartCommunication:uart_comm ; SerialUartCommunication ; work         ;
+; |MatrixLinearRegression                ; 164 (91)            ; 145 (79)                  ; 0                 ; 0          ; 11   ; 0            ; |MatrixLinearRegression                                   ; MatrixLinearRegression  ; work         ;
+;    |FrequencyDivider:freq|             ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|FrequencyDivider:freq             ; FrequencyDivider        ; work         ;
+;    |SerialUartCommunication:uart_comm| ; 40 (40)             ; 39 (39)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|SerialUartCommunication:uart_comm ; SerialUartCommunication ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,53 +236,76 @@ Encoding Type:  One-Hot
 +-------------------+-------------------+------------------+-------------------------+
 
 
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal                     ;
++---------------------------------------------------+----------------------------------------+
+; SerialUartCommunication:uart_comm|tx_state        ; Stuck at GND due to stuck port data_in ;
+; SerialUartCommunication:uart_comm|tx_buffer[1..9] ; Lost fanout                            ;
+; SerialUartCommunication:uart_comm|tx_count[0..3]  ; Lost fanout                            ;
+; SerialUartCommunication:uart_comm|tx_buffer[0]    ; Stuck at VCC due to stuck port data_in ;
+; SerialUartCommunication:uart_comm|baud_pulse      ; Lost fanout                            ;
+; SerialUartCommunication:uart_comm|tx              ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 17            ;                                        ;
++---------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
++--------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                                             ;
++--------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; SerialUartCommunication:uart_comm|tx_state ; Stuck at GND              ; SerialUartCommunication:uart_comm|tx_buffer[2],                                    ;
+;                                            ; due to stuck port data_in ; SerialUartCommunication:uart_comm|tx_buffer[3],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[4],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[5],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[6],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[7],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[8],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[9],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_count[3],                                     ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|tx_buffer[0],                                    ;
+;                                            ;                           ; SerialUartCommunication:uart_comm|baud_pulse, SerialUartCommunication:uart_comm|tx ;
++--------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
-; Number of registers using Synchronous Clear  ; 9     ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 43    ;
+; Total registers                              ; 145   ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 95    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Clock Enable       ; 27    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Inverted Register Statistics                             ;
-+------------------------------------------------+---------+
-; Inverted Register                              ; Fan out ;
-+------------------------------------------------+---------+
-; SerialUartCommunication:uart_comm|tx           ; 1       ;
-; SerialUartCommunication:uart_comm|tx_busy      ; 3       ;
-; SerialUartCommunication:uart_comm|tx_buffer[0] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[1] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[2] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[3] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[4] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[5] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[6] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[7] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[8] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[9] ; 1       ;
-; Total number of inverted registers = 12        ;         ;
-+------------------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; \p2:counter[0]                         ; 3       ;
+; \p1:counter[0]                         ; 5       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_count[3]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[2]  ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[2]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[0] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_count[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[3] ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[3] ;
+; 1:1                ; 10 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -288,7 +315,7 @@ Encoding Type:  One-Hot
 +----------------+----------+----------------------------------------------------+
 ; clk_freq       ; 50000000 ; Signed Integer                                     ;
 ; baud_rate      ; 115200   ; Signed Integer                                     ;
-; os_rate        ; 8        ; Signed Integer                                     ;
+; os_rate        ; 16       ; Signed Integer                                     ;
 ; d_width        ; 8        ; Signed Integer                                     ;
 ; parity         ; 0        ; Signed Integer                                     ;
 ; parity_eo      ; '0'      ; Enumerated                                         ;
@@ -296,15 +323,17 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SerialUartCommunication:uart_comm"                                                          ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; rx_busy      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; os_pulse_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rx_error     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SerialUartCommunication:uart_comm"                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; rx_busy       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; os_pulse_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_error      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_data[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tx_busy       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -312,27 +341,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 78                          ;
-;     CLR               ; 13                          ;
+; arriav_ff             ; 145                         ;
+;     CLR               ; 75                          ;
 ;     CLR SCLR          ; 9                           ;
-;     CLR SLD           ; 1                           ;
-;     ENA               ; 34                          ;
-;     ENA CLR           ; 20                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 64                          ;
-;     arith             ; 9                           ;
-;         1 data inputs ; 9                           ;
-;     normal            ; 55                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 12                          ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 11                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 8                           ;
+; arriav_lcell_comb     ; 165                         ;
+;     arith             ; 97                          ;
+;         1 data inputs ; 95                          ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 68                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 13                          ;
 ;         4 data inputs ; 8                           ;
-;         5 data inputs ; 14                          ;
-;         6 data inputs ; 9                           ;
-; boundary_port         ; 6                           ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 24                          ;
+; boundary_port         ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.36                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -351,13 +382,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Nov 29 17:21:16 2023
+    Info: Processing started: Thu Nov 30 10:43:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MatrixLinearRegression -c MatrixLinearRegression
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 3 design units, including 1 entities, in source file matrixlinearregression.vhd
     Info (12022): Found design unit 1: newtype File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 5
-    Info (12022): Found design unit 2: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 28
+    Info (12022): Found design unit 2: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 27
     Info (12023): Found entity 1: MatrixLinearRegression File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file matrixinverter.vhd
     Info (12022): Found design unit 1: MatrixInverter-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixInverter.vhd Line: 16
@@ -379,19 +410,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file matrixo
     Info (12022): Found design unit 1: MatrixOperations-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 14
     Info (12023): Found entity 1: MatrixOperations File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 6
 Info (12127): Elaborating entity "MatrixLinearRegression" for the top level hierarchy
-Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 62
+Warning (10541): VHDL Signal Declaration warning at MatrixLinearRegression.vhd(74): used implicit default value for signal "tx_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 74
+Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(75): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 75
+Warning (10541): VHDL Signal Declaration warning at MatrixLinearRegression.vhd(75): used implicit default value for signal "tx_start" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 75
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
+Warning (12125): Using design file frequencydivider.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FrequencyDivider-behavior File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 11
+    Info (12023): Found entity 1: FrequencyDivider File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 4
+Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 82
+Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 87
 Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(133): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 133
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "tx" is stuck at VCC File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 22
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4894 megabytes
-    Info: Processing ended: Wed Nov 29 17:21:25 2023
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 184 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Thu Nov 30 10:43:38 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 

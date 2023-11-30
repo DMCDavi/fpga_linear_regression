@@ -8,7 +8,7 @@ ser = serial.Serial(
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
-    timeout=1
+    timeout=10
 )
 
 # Open the serial port if it's not already open
@@ -18,7 +18,7 @@ if not ser.isOpen():
 try:
     while True:
         # Prepare data to be sent
-        data_to_send = '23'  # Replace with your data
+        data_to_send = '73'  # Replace with your data
 
         encoded_data = data_to_send.encode()
 
@@ -35,7 +35,7 @@ try:
             print("Received:", incoming_data.decode().strip())
 
         # Wait a bit before sending the next data
-        time.sleep(1)
+        time.sleep(10)
 except KeyboardInterrupt:
     # Close the port when done
     ser.close()

@@ -60,7 +60,7 @@ begin
         -- Conversão para saída
         for i in 1 to N loop
             for j in 1 to N loop
-                A_out(i, j) <= std_logic_vector(to_signed(I_int(i, j), 16));
+                A_out(i, j) <= std_logic_vector(to_signed(I_int(i, j), 8));
             end loop;
         end loop;
     end process matrix_inversion;

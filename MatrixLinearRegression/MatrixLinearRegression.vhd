@@ -4,8 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 package newtype is
     -- Definindo o tipo de array para as matrizes e vetores
-    type matrix_type is array (1 to 2, 1 to 2) of STD_LOGIC_VECTOR(15 downto 0);
-    type vector_type is array (1 to 2) of STD_LOGIC_VECTOR(15 downto 0);
+    type matrix_type is array (1 to 2, 1 to 2) of STD_LOGIC_VECTOR(7 downto 0);
+    type vector_type is array (1 to 2) of STD_LOGIC_VECTOR(7 downto 0);
 	 type int_matrix_type is array (1 to 2, 1 to 2) of integer;
 end newtype;
 
@@ -20,12 +20,25 @@ entity MatrixLinearRegression is
 		reset		:	IN		STD_LOGIC;										--ascynchronous reset
 		rx			:	IN		STD_LOGIC;										--receive pin
 		tx			:	OUT	STD_LOGIC;
-		rx_ready_t:OUT	STD_LOGIC;
-		tx_busy_t :OUT	STD_LOGIC);										--transmit pin
+		digit : OUT STD_LOGIC_VECTOR(6 downto 0));										--transmit pin
 		
 end MatrixLinearRegression;
 
 architecture Behavioral of MatrixLinearRegression is
+	TYPE segment_array IS ARRAY(0 TO 9) OF STD_LOGIC_VECTOR(6 DOWNTO 0); -- Define um tipo de array para representar segmentos.
+	CONSTANT segments: segment_array := (       -- Define constantes para representação de segmentos dos números de 0 a 9.
+		"0000001", -- 0
+		"1001111", -- 1
+		"0010010", -- 2
+		"0000110", -- 3
+		"1001100", -- 4
+		"0100100", -- 5
+		"0100000", -- 6
+		"0001111", -- 7
+		"0000000", -- 8
+		"0000100"  -- 9
+	);
+
     -- Adicionando o componente SerialUartCommunication
     component SerialUartCommunication
         Port (
@@ -49,15 +62,27 @@ architecture Behavioral of MatrixLinearRegression is
 			  B : out matrix_type   -- Resultado vetor B
 		  );
     end component;
+	 
+	 component FrequencyDivider is
+		 port (
+			  clk: IN STD_LOGIC;
+			  div_out: OUT STD_LOGIC
+		 );
+	end component;
 
     signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
     signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
-    signal tx_busy, tx_start, rx_ready : STD_LOGIC;
+    signal tx_busy, tx_start, rx_ready, new_clk : STD_LOGIC;
 
     -- Sinais para a matriz X e Y
 	 signal X, Y, B : matrix_type;
 	 signal teste: STD_LOGIC_VECTOR(7 DOWNTO 0);
 begin
+
+    freq: FrequencyDivider port map(
+        clk => clk,
+		  div_out => new_clk
+    );
 
     uart_comm: SerialUartCommunication port map(
         clk => clk,
@@ -70,21 +95,31 @@ begin
         tx_ena => tx_start,
         tx_busy => tx_busy
     );
-rx_ready_t <= rx_ready;
-tx_busy_t <= tx_busy;
-    process(clk, rx_ready)
-    begin
-        if rising_edge(clk) then
-            if rx_ready = '1' then
-					if tx_busy = '0' then
-                teste <= rx_data;
-                tx_data <= teste;
-                tx_start <= '1';
-					 end if;
-            else
-                tx_start <= '0';
-            end if;
-        end if;
-    end process;
+	 
+	 p1: process(rx_data, rx_ready)
+		variable counter: integer := 1;
+	 begin
+		if rx_ready'EVENT AND rx_ready = '1' and counter <= 2 then
+			X(1,counter) <= rx_data;
+			counter := counter + 1;
+		end if;
+		
+		if counter > 2 then
+			counter := 1;
+		end if;
+	 end process p1;
+	 
+	 p2: process(new_clk, X)
+		variable counter: integer := 1;
+	 begin
+		if rising_edge(new_clk) then
+			digit <= segments(to_integer(unsigned(X(1,counter)(3 downto 0))));
+			counter := counter + 1;
+		end if;
+				if counter > 2 then
+			counter := 1;
+		end if;
+	 end process p2;
 
+	
 end Behavioral;

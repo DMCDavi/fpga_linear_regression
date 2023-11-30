@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 29 17:21:25 2023
+Analysis & Synthesis Status : Successful - Thu Nov 30 10:43:38 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : MatrixLinearRegression
 Top-level Entity Name : MatrixLinearRegression
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 78
-Total pins : 6
+Total registers : 145
+Total pins : 11
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

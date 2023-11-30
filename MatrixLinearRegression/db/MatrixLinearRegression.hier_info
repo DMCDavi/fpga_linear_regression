@@ -1,27 +1,47 @@
 |MatrixLinearRegression
+clk => FrequencyDivider:freq.clk
 clk => SerialUartCommunication:uart_comm.clk
-clk => tx_start.CLK
-clk => tx_data[0].CLK
-clk => tx_data[1].CLK
-clk => tx_data[2].CLK
-clk => tx_data[3].CLK
-clk => tx_data[4].CLK
-clk => tx_data[5].CLK
-clk => tx_data[6].CLK
-clk => tx_data[7].CLK
-clk => teste[0].CLK
-clk => teste[1].CLK
-clk => teste[2].CLK
-clk => teste[3].CLK
-clk => teste[4].CLK
-clk => teste[5].CLK
-clk => teste[6].CLK
-clk => teste[7].CLK
 reset => SerialUartCommunication:uart_comm.reset_n
 rx => SerialUartCommunication:uart_comm.rx
 tx << SerialUartCommunication:uart_comm.tx
-rx_ready_t << SerialUartCommunication:uart_comm.rx_ready
-tx_busy_t << SerialUartCommunication:uart_comm.tx_busy
+digit[0] << digit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[1] << digit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[2] << digit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[3] << digit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[4] << digit[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[5] << digit[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+digit[6] << digit[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MatrixLinearRegression|FrequencyDivider:freq
+clk => local_out.CLK
+clk => iterations[0].CLK
+clk => iterations[1].CLK
+clk => iterations[2].CLK
+clk => iterations[3].CLK
+clk => iterations[4].CLK
+clk => iterations[5].CLK
+clk => iterations[6].CLK
+clk => iterations[7].CLK
+clk => iterations[8].CLK
+clk => iterations[9].CLK
+clk => iterations[10].CLK
+clk => iterations[11].CLK
+clk => iterations[12].CLK
+clk => iterations[13].CLK
+clk => iterations[14].CLK
+clk => iterations[15].CLK
+clk => iterations[16].CLK
+clk => iterations[17].CLK
+clk => iterations[18].CLK
+clk => iterations[19].CLK
+clk => iterations[20].CLK
+clk => iterations[21].CLK
+clk => iterations[22].CLK
+clk => iterations[23].CLK
+clk => iterations[24].CLK
+clk => iterations[25].CLK
+div_out <= local_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MatrixLinearRegression|SerialUartCommunication:uart_comm
@@ -69,6 +89,7 @@ clk => rx_count[3].CLK
 clk => os_count[0].CLK
 clk => os_count[1].CLK
 clk => os_count[2].CLK
+clk => os_count[3].CLK
 clk => os_pulse.CLK
 clk => baud_pulse.CLK
 clk => count_os[0].CLK
@@ -76,7 +97,6 @@ clk => count_os[1].CLK
 clk => count_os[2].CLK
 clk => count_os[3].CLK
 clk => count_os[4].CLK
-clk => count_os[5].CLK
 clk => count_baud[0].CLK
 clk => count_baud[1].CLK
 clk => count_baud[2].CLK
@@ -105,6 +125,7 @@ reset_n => rx_count[3].ACLR
 reset_n => os_count[0].ACLR
 reset_n => os_count[1].ACLR
 reset_n => os_count[2].ACLR
+reset_n => os_count[3].ACLR
 reset_n => os_pulse.ACLR
 reset_n => baud_pulse.ACLR
 reset_n => count_os[0].ACLR
@@ -112,7 +133,6 @@ reset_n => count_os[1].ACLR
 reset_n => count_os[2].ACLR
 reset_n => count_os[3].ACLR
 reset_n => count_os[4].ACLR
-reset_n => count_os[5].ACLR
 reset_n => count_baud[0].ACLR
 reset_n => count_baud[1].ACLR
 reset_n => count_baud[2].ACLR
@@ -174,6 +194,7 @@ tx_data[5] => tx_buffer.DATAB
 tx_data[6] => tx_buffer.DATAB
 tx_data[7] => tx_buffer.DATAB
 rx => rx_buffer.DATAB
+rx => os_count.OUTPUTSELECT
 rx => os_count.OUTPUTSELECT
 rx => os_count.OUTPUTSELECT
 rx => os_count.OUTPUTSELECT

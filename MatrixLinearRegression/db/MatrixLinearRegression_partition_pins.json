@@ -4,15 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "tx",
+					"name" : "digit[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_ready_t",
+					"name" : "digit[1]",
 					"strict" : false
 				},
 				{
-					"name" : "tx_busy_t",
+					"name" : "digit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[4]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[5]",
+					"strict" : false
+				},
+				{
+					"name" : "digit[6]",
 					"strict" : false
 				},
 				{
