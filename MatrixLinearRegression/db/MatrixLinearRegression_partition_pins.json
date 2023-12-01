@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "init_transmission",
+					"strict" : false
+				},
+				{
 					"name" : "rx",
 					"strict" : false
 				}

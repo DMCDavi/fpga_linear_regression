@@ -46,7 +46,7 @@ begin
     -- Conversão para saída
     loop_output: for i in 1 to N generate
         loop_output_1: for j in 1 to P generate
-            C(i, j) <= std_logic_vector(to_signed(c_int(i, j), 8));
+            C(i, j) <= std_logic_vector(to_signed(c_int(i, j), NUMBER_BITS_WIDTH));
         end generate loop_output_1;
     end generate loop_output;
 end Behavioral;

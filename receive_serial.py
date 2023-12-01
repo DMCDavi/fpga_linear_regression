@@ -7,8 +7,7 @@ ser = serial.Serial(
     baudrate=115200,  # Set baud rate
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
-    timeout=1
+    bytesize=serial.EIGHTBITS
 )
 
 # Open the serial port if it's not already open
@@ -26,8 +25,6 @@ try:
             int_value = int.from_bytes(incoming_data, byteorder='big')
             
             print("Received:", int_value)
-
-        time.sleep(1)
 
 except KeyboardInterrupt:
     # Close the port when done

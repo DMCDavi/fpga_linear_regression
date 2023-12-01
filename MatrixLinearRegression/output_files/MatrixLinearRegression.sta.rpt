@@ -1,5 +1,5 @@
 Timing Analyzer report for MatrixLinearRegression
-Fri Dec  1 11:10:55 2023
+Fri Dec  1 16:57:35 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -100,16 +100,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.41        ;
+; Average used               ; 3.43        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  34.5%      ;
-;     Processor 3            ;  34.1%      ;
-;     Processor 4            ;  34.0%      ;
-;     Processor 5            ;  19.3%      ;
-;     Processor 6            ;  19.2%      ;
+;     Processor 2            ;  63.0%      ;
+;     Processor 3            ;  62.8%      ;
+;     Processor 4            ;  62.8%      ;
+;     Processor 5            ;  27.2%      ;
+;     Processor 6            ;  27.2%      ;
 +----------------------------+-------------+
 
 
@@ -130,10 +130,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note ;
 +------------+-----------------+------------------------------------------------+------+
-; 9.06 MHz   ; 9.06 MHz        ; SerialUartCommunication:uart_comm|rx_ready_aux ;      ;
-; 104.11 MHz ; 104.11 MHz      ; FrequencyDivider:freq|local_out                ;      ;
-; 108.05 MHz ; 108.05 MHz      ; SerialUartCommunication:uart_comm|tx_done      ;      ;
-; 155.93 MHz ; 155.93 MHz      ; clk                                            ;      ;
+; 8.94 MHz   ; 8.94 MHz        ; SerialUartCommunication:uart_comm|rx_ready_aux ;      ;
+; 106.75 MHz ; 106.75 MHz      ; FrequencyDivider:freq|local_out                ;      ;
+; 107.11 MHz ; 107.11 MHz      ; SerialUartCommunication:uart_comm|tx_done      ;      ;
+; 152.79 MHz ; 152.79 MHz      ; clk                                            ;      ;
 +------------+-----------------+------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -149,10 +149,10 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------+----------+---------------+
 ; Clock                                          ; Slack    ; End Point TNS ;
 +------------------------------------------------+----------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -109.415 ; -9168.107     ;
-; FrequencyDivider:freq|local_out                ; -8.605   ; -613.357      ;
-; SerialUartCommunication:uart_comm|tx_done      ; -8.255   ; -585.590      ;
-; clk                                            ; -5.413   ; -234.344      ;
+; SerialUartCommunication:uart_comm|tx_done      ; -310.860 ; -2981.001     ;
+; FrequencyDivider:freq|local_out                ; -310.845 ; -3018.997     ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -110.908 ; -17769.773    ;
+; clk                                            ; -5.545   ; -302.782      ;
 +------------------------------------------------+----------+---------------+
 
 
@@ -161,10 +161,10 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------+-------+---------------+
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.175 ; 0.000         ;
-; FrequencyDivider:freq|local_out                ; 0.357 ; 0.000         ;
-; SerialUartCommunication:uart_comm|tx_done      ; 0.357 ; 0.000         ;
-; clk                                            ; 0.445 ; 0.000         ;
+; clk                                            ; 0.440 ; 0.000         ;
+; SerialUartCommunication:uart_comm|tx_done      ; 0.454 ; 0.000         ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.512 ; 0.000         ;
+; FrequencyDivider:freq|local_out                ; 0.533 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -185,10 +185,10 @@ No paths to report.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -2.225 ; -763.171      ;
-; clk                                            ; -0.538 ; -80.841       ;
-; FrequencyDivider:freq|local_out                ; -0.538 ; -61.577       ;
-; SerialUartCommunication:uart_comm|tx_done      ; -0.538 ; -60.913       ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -2.225 ; -483.257      ;
+; SerialUartCommunication:uart_comm|tx_done      ; -0.566 ; -65.321       ;
+; clk                                            ; -0.538 ; -90.400       ;
+; FrequencyDivider:freq|local_out                ; -0.538 ; -66.852       ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -204,10 +204,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note ;
 +------------+-----------------+------------------------------------------------+------+
-; 9.02 MHz   ; 9.02 MHz        ; SerialUartCommunication:uart_comm|rx_ready_aux ;      ;
-; 103.22 MHz ; 103.22 MHz      ; FrequencyDivider:freq|local_out                ;      ;
-; 107.33 MHz ; 107.33 MHz      ; SerialUartCommunication:uart_comm|tx_done      ;      ;
-; 152.6 MHz  ; 152.6 MHz       ; clk                                            ;      ;
+; 8.9 MHz    ; 8.9 MHz         ; SerialUartCommunication:uart_comm|rx_ready_aux ;      ;
+; 103.91 MHz ; 103.91 MHz      ; FrequencyDivider:freq|local_out                ;      ;
+; 107.6 MHz  ; 107.6 MHz       ; SerialUartCommunication:uart_comm|tx_done      ;      ;
+; 149.08 MHz ; 149.08 MHz      ; clk                                            ;      ;
 +------------+-----------------+------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -217,10 +217,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+----------+---------------+
 ; Clock                                          ; Slack    ; End Point TNS ;
 +------------------------------------------------+----------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -109.907 ; -9217.326     ;
-; FrequencyDivider:freq|local_out                ; -8.688   ; -622.318      ;
-; SerialUartCommunication:uart_comm|tx_done      ; -8.317   ; -598.141      ;
-; clk                                            ; -5.553   ; -229.412      ;
+; FrequencyDivider:freq|local_out                ; -323.880 ; -3138.441     ;
+; SerialUartCommunication:uart_comm|tx_done      ; -323.835 ; -3085.782     ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -111.355 ; -17855.713    ;
+; clk                                            ; -5.708   ; -294.593      ;
 +------------------------------------------------+----------+---------------+
 
 
@@ -229,10 +229,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+-------+---------------+
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.162 ; 0.000         ;
-; clk                                            ; 0.288 ; 0.000         ;
-; FrequencyDivider:freq|local_out                ; 0.360 ; 0.000         ;
-; SerialUartCommunication:uart_comm|tx_done      ; 0.360 ; 0.000         ;
+; clk                                            ; 0.259 ; 0.000         ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.530 ; 0.000         ;
+; SerialUartCommunication:uart_comm|tx_done      ; 0.530 ; 0.000         ;
+; FrequencyDivider:freq|local_out                ; 0.564 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -253,10 +253,10 @@ No paths to report.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -2.225 ; -762.821      ;
-; clk                                            ; -0.538 ; -83.310       ;
-; FrequencyDivider:freq|local_out                ; -0.538 ; -60.661       ;
-; SerialUartCommunication:uart_comm|tx_done      ; -0.538 ; -60.566       ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -2.225 ; -480.774      ;
+; SerialUartCommunication:uart_comm|tx_done      ; -0.566 ; -64.223       ;
+; clk                                            ; -0.538 ; -91.582       ;
+; FrequencyDivider:freq|local_out                ; -0.538 ; -66.964       ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -267,16 +267,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                                      ;
-+------------------------------------------------+---------+---------------+
-; Clock                                          ; Slack   ; End Point TNS ;
-+------------------------------------------------+---------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -56.575 ; -4686.672     ;
-; FrequencyDivider:freq|local_out                ; -3.933  ; -276.202      ;
-; SerialUartCommunication:uart_comm|tx_done      ; -3.723  ; -261.658      ;
-; clk                                            ; -2.985  ; -75.994       ;
-+------------------------------------------------+---------+---------------+
++---------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                       ;
++------------------------------------------------+----------+---------------+
+; Clock                                          ; Slack    ; End Point TNS ;
++------------------------------------------------+----------+---------------+
+; SerialUartCommunication:uart_comm|tx_done      ; -150.701 ; -1426.616     ;
+; FrequencyDivider:freq|local_out                ; -150.547 ; -1436.184     ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -57.471  ; -9168.957     ;
+; clk                                            ; -3.065   ; -104.794      ;
++------------------------------------------------+----------+---------------+
 
 
 +------------------------------------------------------------------------+
@@ -284,10 +284,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+-------+---------------+
 ; Clock                                          ; Slack ; End Point TNS ;
 +------------------------------------------------+-------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.032 ; 0.000         ;
-; FrequencyDivider:freq|local_out                ; 0.110 ; 0.000         ;
-; SerialUartCommunication:uart_comm|tx_done      ; 0.110 ; 0.000         ;
-; clk                                            ; 0.169 ; 0.000         ;
+; clk                                            ; 0.135 ; 0.000         ;
+; SerialUartCommunication:uart_comm|tx_done      ; 0.139 ; 0.000         ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.156 ; 0.000         ;
+; FrequencyDivider:freq|local_out                ; 0.163 ; 0.000         ;
 +------------------------------------------------+-------+---------------+
 
 
@@ -308,10 +308,10 @@ No paths to report.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -1.702 ; -520.552      ;
-; clk                                            ; -0.365 ; -10.589       ;
-; SerialUartCommunication:uart_comm|tx_done      ; -0.025 ; -0.135        ;
-; FrequencyDivider:freq|local_out                ; -0.005 ; -0.015        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -1.702 ; -253.103      ;
+; clk                                            ; -0.464 ; -12.401       ;
+; FrequencyDivider:freq|local_out                ; -0.192 ; -4.658        ;
+; SerialUartCommunication:uart_comm|tx_done      ; -0.167 ; -3.663        ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -322,16 +322,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+--------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                                       ;
-+------------------------------------------------+---------+---------------+
-; Clock                                          ; Slack   ; End Point TNS ;
-+------------------------------------------------+---------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -51.505 ; -4273.759     ;
-; FrequencyDivider:freq|local_out                ; -3.556  ; -251.170      ;
-; SerialUartCommunication:uart_comm|tx_done      ; -3.353  ; -236.521      ;
-; clk                                            ; -2.710  ; -60.754       ;
-+------------------------------------------------+---------+---------------+
++---------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                        ;
++------------------------------------------------+----------+---------------+
+; Clock                                          ; Slack    ; End Point TNS ;
++------------------------------------------------+----------+---------------+
+; SerialUartCommunication:uart_comm|tx_done      ; -141.225 ; -1329.220     ;
+; FrequencyDivider:freq|local_out                ; -141.071 ; -1342.296     ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -52.654  ; -8411.376     ;
+; clk                                            ; -2.749   ; -85.727       ;
++------------------------------------------------+----------+---------------+
 
 
 +-------------------------------------------------------------------------+
@@ -339,10 +339,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; clk                                            ; -0.092 ; -0.254        ;
-; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.020  ; 0.000         ;
-; FrequencyDivider:freq|local_out                ; 0.092  ; 0.000         ;
-; SerialUartCommunication:uart_comm|tx_done      ; 0.092  ; 0.000         ;
+; clk                                            ; -0.160 ; -0.264        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; 0.144  ; 0.000         ;
+; FrequencyDivider:freq|local_out                ; 0.148  ; 0.000         ;
+; SerialUartCommunication:uart_comm|tx_done      ; 0.148  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -363,10 +363,10 @@ No paths to report.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SerialUartCommunication:uart_comm|rx_ready_aux ; -1.702 ; -516.295      ;
-; clk                                            ; -0.366 ; -10.617       ;
-; SerialUartCommunication:uart_comm|tx_done      ; 0.013  ; 0.000         ;
-; FrequencyDivider:freq|local_out                ; 0.036  ; 0.000         ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; -1.702 ; -245.003      ;
+; clk                                            ; -0.462 ; -12.309       ;
+; FrequencyDivider:freq|local_out                ; -0.129 ; -1.797        ;
+; SerialUartCommunication:uart_comm|tx_done      ; -0.109 ; -1.432        ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -382,16 +382,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------------+------------+--------+----------+---------+---------------------+
 ; Clock                                           ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                                ; -109.907   ; -0.092 ; N/A      ; N/A     ; -2.225              ;
-;  FrequencyDivider:freq|local_out                ; -8.688     ; 0.092  ; N/A      ; N/A     ; -0.538              ;
-;  SerialUartCommunication:uart_comm|rx_ready_aux ; -109.907   ; 0.020  ; N/A      ; N/A     ; -2.225              ;
-;  SerialUartCommunication:uart_comm|tx_done      ; -8.317     ; 0.092  ; N/A      ; N/A     ; -0.538              ;
-;  clk                                            ; -5.553     ; -0.092 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                                 ; -10667.197 ; -0.254 ; 0.0      ; 0.0     ; -967.358            ;
-;  FrequencyDivider:freq|local_out                ; -622.318   ; 0.000  ; N/A      ; N/A     ; -61.577             ;
-;  SerialUartCommunication:uart_comm|rx_ready_aux ; -9217.326  ; 0.000  ; N/A      ; N/A     ; -763.171            ;
-;  SerialUartCommunication:uart_comm|tx_done      ; -598.141   ; 0.000  ; N/A      ; N/A     ; -60.913             ;
-;  clk                                            ; -234.344   ; -0.254 ; N/A      ; N/A     ; -83.310             ;
+; Worst-case Slack                                ; -323.880   ; -0.160 ; N/A      ; N/A     ; -2.225              ;
+;  FrequencyDivider:freq|local_out                ; -323.880   ; 0.148  ; N/A      ; N/A     ; -0.538              ;
+;  SerialUartCommunication:uart_comm|rx_ready_aux ; -111.355   ; 0.144  ; N/A      ; N/A     ; -2.225              ;
+;  SerialUartCommunication:uart_comm|tx_done      ; -323.835   ; 0.139  ; N/A      ; N/A     ; -0.566              ;
+;  clk                                            ; -5.708     ; -0.160 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                 ; -24374.529 ; -0.264 ; 0.0      ; 0.0     ; -705.83             ;
+;  FrequencyDivider:freq|local_out                ; -3138.441  ; 0.000  ; N/A      ; N/A     ; -66.964             ;
+;  SerialUartCommunication:uart_comm|rx_ready_aux ; -17855.713 ; 0.000  ; N/A      ; N/A     ; -483.257            ;
+;  SerialUartCommunication:uart_comm|tx_done      ; -3085.782  ; 0.000  ; N/A      ; N/A     ; -65.321             ;
+;  clk                                            ; -302.782   ; -0.264 ; N/A      ; N/A     ; -91.582             ;
 +-------------------------------------------------+------------+--------+----------+---------+---------------------+
 
 
@@ -417,9 +417,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------+--------------+-----------------+-----------------+
 ; Pin               ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------+--------------+-----------------+-----------------+
-; init_transmission ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; init_transmission ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rx                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +-------------------+--------------+-----------------+-----------------+
 
@@ -497,16 +497,16 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                     ; To Clock                                       ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
-; clk                                            ; clk                                            ; 1893         ; 0        ; 0        ; 0        ;
+; clk                                            ; clk                                            ; 2417         ; 0        ; 0        ; 0        ;
 ; FrequencyDivider:freq|local_out                ; clk                                            ; 1            ; 1        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|rx_ready_aux ; clk                                            ; 1            ; 1        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|tx_done      ; clk                                            ; 9            ; 1        ; 0        ; 0        ;
-; FrequencyDivider:freq|local_out                ; FrequencyDivider:freq|local_out                ; 735071       ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|rx_ready_aux ; FrequencyDivider:freq|local_out                ; 576          ; 0        ; 0        ; 0        ;
-; clk                                            ; SerialUartCommunication:uart_comm|rx_ready_aux ; 288          ; 0        ; 0        ; 0        ;
+; FrequencyDivider:freq|local_out                ; FrequencyDivider:freq|local_out                ; 735048       ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; FrequencyDivider:freq|local_out                ; > 2147483647 ; 0        ; 0        ; 0        ;
+; clk                                            ; SerialUartCommunication:uart_comm|rx_ready_aux ; 176          ; 0        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|rx_ready_aux ; > 2147483647 ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|tx_done      ; 576          ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|tx_done      ; SerialUartCommunication:uart_comm|tx_done      ; 735050       ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|tx_done      ; > 2147483647 ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|tx_done      ; SerialUartCommunication:uart_comm|tx_done      ; 712784       ; 0        ; 0        ; 0        ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -516,16 +516,16 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                     ; To Clock                                       ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
-; clk                                            ; clk                                            ; 1893         ; 0        ; 0        ; 0        ;
+; clk                                            ; clk                                            ; 2417         ; 0        ; 0        ; 0        ;
 ; FrequencyDivider:freq|local_out                ; clk                                            ; 1            ; 1        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|rx_ready_aux ; clk                                            ; 1            ; 1        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|tx_done      ; clk                                            ; 9            ; 1        ; 0        ; 0        ;
-; FrequencyDivider:freq|local_out                ; FrequencyDivider:freq|local_out                ; 735071       ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|rx_ready_aux ; FrequencyDivider:freq|local_out                ; 576          ; 0        ; 0        ; 0        ;
-; clk                                            ; SerialUartCommunication:uart_comm|rx_ready_aux ; 288          ; 0        ; 0        ; 0        ;
+; FrequencyDivider:freq|local_out                ; FrequencyDivider:freq|local_out                ; 735048       ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; FrequencyDivider:freq|local_out                ; > 2147483647 ; 0        ; 0        ; 0        ;
+; clk                                            ; SerialUartCommunication:uart_comm|rx_ready_aux ; 176          ; 0        ; 0        ; 0        ;
 ; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|rx_ready_aux ; > 2147483647 ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|tx_done      ; 576          ; 0        ; 0        ; 0        ;
-; SerialUartCommunication:uart_comm|tx_done      ; SerialUartCommunication:uart_comm|tx_done      ; 735050       ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|rx_ready_aux ; SerialUartCommunication:uart_comm|tx_done      ; > 2147483647 ; 0        ; 0        ; 0        ;
+; SerialUartCommunication:uart_comm|tx_done      ; SerialUartCommunication:uart_comm|tx_done      ; 712784       ; 0        ; 0        ; 0        ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -549,8 +549,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 83    ; 83   ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 97    ; 97   ;
 ; Unconstrained Output Ports      ; 9     ; 9    ;
 ; Unconstrained Output Port Paths ; 9     ; 9    ;
 +---------------------------------+-------+------+
@@ -568,14 +568,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------------------+------------------------------------------------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                ;
++-------------------+--------------------------------------------------------------------------------------+
+; Input Port        ; Comment                                                                              ;
++-------------------+--------------------------------------------------------------------------------------+
+; init_transmission ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -595,14 +596,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rx         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                ;
++-------------------+--------------------------------------------------------------------------------------+
+; Input Port        ; Comment                                                                              ;
++-------------------+--------------------------------------------------------------------------------------+
+; init_transmission ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rx                ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -628,7 +630,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Dec  1 11:10:47 2023
+    Info: Processing started: Fri Dec  1 16:57:16 2023
 Info: Command: quartus_sta MatrixLinearRegression -c MatrixLinearRegression
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -647,29 +649,29 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -109.415
+Info (332146): Worst-case setup slack is -310.860
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -109.415           -9168.107 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -8.605            -613.357 FrequencyDivider:freq|local_out 
-    Info (332119):    -8.255            -585.590 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):    -5.413            -234.344 clk 
-Info (332146): Worst-case hold slack is 0.175
+    Info (332119):  -310.860           -2981.001 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):  -310.845           -3018.997 FrequencyDivider:freq|local_out 
+    Info (332119):  -110.908          -17769.773 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -5.545            -302.782 clk 
+Info (332146): Worst-case hold slack is 0.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.175               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):     0.357               0.000 FrequencyDivider:freq|local_out 
-    Info (332119):     0.357               0.000 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):     0.445               0.000 clk 
+    Info (332119):     0.440               0.000 clk 
+    Info (332119):     0.454               0.000 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):     0.512               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):     0.533               0.000 FrequencyDivider:freq|local_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -763.171 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -0.538             -80.841 clk 
-    Info (332119):    -0.538             -61.577 FrequencyDivider:freq|local_out 
-    Info (332119):    -0.538             -60.913 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):    -2.225            -483.257 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -0.566             -65.321 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):    -0.538             -90.400 clk 
+    Info (332119):    -0.538             -66.852 FrequencyDivider:freq|local_out 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -678,29 +680,29 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -109.907
+Info (332146): Worst-case setup slack is -323.880
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -109.907           -9217.326 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -8.688            -622.318 FrequencyDivider:freq|local_out 
-    Info (332119):    -8.317            -598.141 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):    -5.553            -229.412 clk 
-Info (332146): Worst-case hold slack is 0.162
+    Info (332119):  -323.880           -3138.441 FrequencyDivider:freq|local_out 
+    Info (332119):  -323.835           -3085.782 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):  -111.355          -17855.713 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -5.708            -294.593 clk 
+Info (332146): Worst-case hold slack is 0.259
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.162               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):     0.288               0.000 clk 
-    Info (332119):     0.360               0.000 FrequencyDivider:freq|local_out 
-    Info (332119):     0.360               0.000 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):     0.259               0.000 clk 
+    Info (332119):     0.530               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):     0.530               0.000 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):     0.564               0.000 FrequencyDivider:freq|local_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -762.821 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -0.538             -83.310 clk 
-    Info (332119):    -0.538             -60.661 FrequencyDivider:freq|local_out 
-    Info (332119):    -0.538             -60.566 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):    -2.225            -480.774 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -0.566             -64.223 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):    -0.538             -91.582 clk 
+    Info (332119):    -0.538             -66.964 FrequencyDivider:freq|local_out 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -709,66 +711,66 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -56.575
+Info (332146): Worst-case setup slack is -150.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -56.575           -4686.672 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -3.933            -276.202 FrequencyDivider:freq|local_out 
-    Info (332119):    -3.723            -261.658 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):    -2.985             -75.994 clk 
-Info (332146): Worst-case hold slack is 0.032
+    Info (332119):  -150.701           -1426.616 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):  -150.547           -1436.184 FrequencyDivider:freq|local_out 
+    Info (332119):   -57.471           -9168.957 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -3.065            -104.794 clk 
+Info (332146): Worst-case hold slack is 0.135
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.032               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):     0.110               0.000 FrequencyDivider:freq|local_out 
-    Info (332119):     0.110               0.000 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):     0.169               0.000 clk 
+    Info (332119):     0.135               0.000 clk 
+    Info (332119):     0.139               0.000 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):     0.156               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):     0.163               0.000 FrequencyDivider:freq|local_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702            -520.552 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -0.365             -10.589 clk 
-    Info (332119):    -0.025              -0.135 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):    -0.005              -0.015 FrequencyDivider:freq|local_out 
+    Info (332119):    -1.702            -253.103 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -0.464             -12.401 clk 
+    Info (332119):    -0.192              -4.658 FrequencyDivider:freq|local_out 
+    Info (332119):    -0.167              -3.663 SerialUartCommunication:uart_comm|tx_done 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -51.505
+Info (332146): Worst-case setup slack is -141.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -51.505           -4273.759 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -3.556            -251.170 FrequencyDivider:freq|local_out 
-    Info (332119):    -3.353            -236.521 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):    -2.710             -60.754 clk 
-Info (332146): Worst-case hold slack is -0.092
+    Info (332119):  -141.225           -1329.220 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):  -141.071           -1342.296 FrequencyDivider:freq|local_out 
+    Info (332119):   -52.654           -8411.376 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -2.749             -85.727 clk 
+Info (332146): Worst-case hold slack is -0.160
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.092              -0.254 clk 
-    Info (332119):     0.020               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):     0.092               0.000 FrequencyDivider:freq|local_out 
-    Info (332119):     0.092               0.000 SerialUartCommunication:uart_comm|tx_done 
+    Info (332119):    -0.160              -0.264 clk 
+    Info (332119):     0.144               0.000 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):     0.148               0.000 FrequencyDivider:freq|local_out 
+    Info (332119):     0.148               0.000 SerialUartCommunication:uart_comm|tx_done 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702            -516.295 SerialUartCommunication:uart_comm|rx_ready_aux 
-    Info (332119):    -0.366             -10.617 clk 
-    Info (332119):     0.013               0.000 SerialUartCommunication:uart_comm|tx_done 
-    Info (332119):     0.036               0.000 FrequencyDivider:freq|local_out 
+    Info (332119):    -1.702            -245.003 SerialUartCommunication:uart_comm|rx_ready_aux 
+    Info (332119):    -0.462             -12.309 clk 
+    Info (332119):    -0.129              -1.797 FrequencyDivider:freq|local_out 
+    Info (332119):    -0.109              -1.432 SerialUartCommunication:uart_comm|tx_done 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5140 megabytes
-    Info: Processing ended: Fri Dec  1 11:10:55 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5225 megabytes
+    Info: Processing ended: Fri Dec  1 16:57:35 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
 
 

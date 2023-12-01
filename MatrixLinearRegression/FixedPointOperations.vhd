@@ -13,25 +13,21 @@ end FixedPointOperations;
 
 package body FixedPointOperations is
 
+function to_fixed_point(a : integer) return integer is
+begin
+    return a * FIXED_POINT_BASE;
+end to_fixed_point;
+
 -- Função de Multiplicação em Ponto Fixo
 function multiply_fixed_point(a : integer; b : integer) return integer is
-    variable result : integer;
 begin
-    -- Multiplicar os números (a * b)
-    result := a * b / FIXED_POINT_BASE;
-
-    -- Ajustar o resultado para manter a precisão em ponto fixo
-    return result;
+    return a * b / FIXED_POINT_BASE;
 end multiply_fixed_point;
 
 -- Função de Divisão em Ponto Fixo
 function divide_fixed_point(a : integer; b : integer) return integer is
-    variable result : integer;
 begin
-    -- Ajustar o dividendo para a precisão em ponto fixo
-	result := (a * FIXED_POINT_BASE) / b ;
-
-    return result;
+    return (a * FIXED_POINT_BASE) / b ;
 end divide_fixed_point;
 
 

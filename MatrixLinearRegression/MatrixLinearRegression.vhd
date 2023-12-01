@@ -53,9 +53,9 @@ architecture Behavioral of MatrixLinearRegression is
 
     -- Sinais para a matriz X e Y
 	 signal X, Y, B : matrix_type;
-	 signal teste: STD_LOGIC_VECTOR(7 DOWNTO 0);
 begin
-
+Y(1,2) <= (others => '0');
+Y(2,2) <= (others => '0');
     freq: FrequencyDivider port map(
         clk => clk,
 		  div_out => new_clk
@@ -79,13 +79,13 @@ begin
 	 begin
 		if rx_ready'EVENT AND rx_ready = '1' then
 			if index mod 3 = 0 then
-				Y(z,1) <= rx_data;
+				Y(z,1) <= "00000000" & rx_data;
 				z := z + 1;
 				if z > 2 then
 					z := 1;
 				end if;
 			else
-				X(i,j) <= rx_data;
+				X(i,j) <= "00000000" & rx_data;
 				j := j + 1;
 				if j > 2 then
 					j := 1;
@@ -112,7 +112,7 @@ begin
 		variable i, j: integer := 1;
 	 begin
 		if rising_edge(new_clk) then
-			digit <= B(i,j);
+			digit <= B(i,j)(15 downto 8);
 				j := j + 1;
 				if j > 2 then
 					j := 1;
@@ -126,12 +126,14 @@ begin
 		end if;
 	 end process p2;
 	 
+	 tx_ena <= not init_transmission;
+	 
 	 p3: process
 		variable i, j: integer := 1;
 	 begin
-		tx_ena <= '1';
+		
 	 wait until tx_done = '1';
-			tx_data <= B(i,j);
+			tx_data <= B(i,j)(7 downto 0);
 				j := j + 1;
 				if j > 2 then
 					j := 1;
