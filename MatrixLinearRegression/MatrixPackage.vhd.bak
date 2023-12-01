@@ -4,14 +4,14 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-package FixedPointOperations is
-    constant FIXED_POINT_BASE : integer := 10;  -- Exemplo: ajuste conforme necessário
+package MatrixPackage is
+    constant FIXED_POINT_BASE : integer := 1000;  -- Exemplo: ajuste conforme necessário
 
     function multiply_fixed_point(a : integer; b : integer) return integer;
     function divide_fixed_point(a : integer; b : integer) return integer;
-end FixedPointOperations;
+end MatrixPackage;
 
-package body FixedPointOperations is
+package body MatrixPackage is
 
 -- Função de Multiplicação em Ponto Fixo
 function multiply_fixed_point(a : integer; b : integer) return integer is
@@ -35,4 +35,4 @@ begin
 end divide_fixed_point;
 
 
-end FixedPointOperations;
+end MatrixPackage;

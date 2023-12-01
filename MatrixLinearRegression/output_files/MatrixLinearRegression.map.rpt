@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MatrixLinearRegression
-Fri Dec  1 12:59:09 2023
+Fri Dec  1 13:16:51 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec  1 12:59:09 2023          ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec  1 13:16:51 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
@@ -197,6 +197,7 @@ https://fpgasoftware.intel.com/eula.
 ; MatrixTranspose.vhd              ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixTranspose.vhd         ;         ;
 ; SerialUartCommunication.vhd      ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd ;         ;
 ; MatrixOperations.vhd             ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd        ;         ;
+; MatrixPackage.vhd                ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixPackage.vhd           ;         ;
 ; frequencydivider.vhd             ; yes             ; Auto-Found VHDL File         ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
@@ -500,7 +501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -510,13 +511,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Dec  1 12:58:52 2023
+    Info: Processing started: Fri Dec  1 13:16:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MatrixLinearRegression -c MatrixLinearRegression
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 3 design units, including 1 entities, in source file matrixlinearregression.vhd
-    Info (12022): Found design unit 1: newtype File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 5
-    Info (12022): Found design unit 2: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 27
-    Info (12023): Found entity 1: MatrixLinearRegression File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file matrixlinearregression.vhd
+    Info (12022): Found design unit 1: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 17
+    Info (12023): Found entity 1: MatrixLinearRegression File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file matrixinverter.vhd
     Info (12022): Found design unit 1: MatrixInverter-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixInverter.vhd Line: 16
     Info (12023): Found entity 1: MatrixInverter File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixInverter.vhd Line: 6
@@ -539,20 +539,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file matrixo
 Info (12021): Found 2 design units, including 0 entities, in source file fixedpointoperations.vhd
     Info (12022): Found design unit 1: FixedPointOperations File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 7
     Info (12022): Found design unit 2: FixedPointOperations-body File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 14
+Info (12021): Found 1 design units, including 0 entities, in source file matrixpackage.vhd
+    Info (12022): Found design unit 1: MatrixPackage File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixPackage.vhd Line: 7
 Info (12127): Elaborating entity "MatrixLinearRegression" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(62): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 62
-Warning (10873): Using initial value X (don't care) for net "Y[1][2]" at MatrixLinearRegression.vhd(65) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 65
-Warning (10873): Using initial value X (don't care) for net "Y[2][2]" at MatrixLinearRegression.vhd(65) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 65
+Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(52): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 52
+Warning (10873): Using initial value X (don't care) for net "Y[1][2]" at MatrixLinearRegression.vhd(55) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 55
+Warning (10873): Using initial value X (don't care) for net "Y[2][2]" at MatrixLinearRegression.vhd(55) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 55
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Y" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
 Warning (12125): Using design file frequencydivider.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: FrequencyDivider-behavior File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 11
     Info (12023): Found entity 1: FrequencyDivider File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 4
-Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 69
-Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 74
+Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 59
+Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 64
 Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(134): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 134
-Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 115
+Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 105
 Warning (10036): Verilog HDL or VHDL warning at MatrixOperations.vhd(40): object "Inv" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 40
 Warning (10036): Verilog HDL or VHDL warning at MatrixOperations.vhd(40): object "XTY" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 40
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
@@ -588,9 +590,9 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_out" into its bus
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 81
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 81
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 81
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -608,16 +610,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "init_transmission" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 20
+    Warning (15610): No output dependent on input pin "init_transmission" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 10
 Info (21057): Implemented 2251 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 2230 logic cells
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4922 megabytes
-    Info: Processing ended: Fri Dec  1 12:59:09 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Fri Dec  1 13:16:51 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:23
 
 

@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.newtype.all;
+use work.MatrixPackage.all;
 
 entity MatrixTranspose is
     Port (

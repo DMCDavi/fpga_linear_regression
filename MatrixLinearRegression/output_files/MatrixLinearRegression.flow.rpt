@@ -1,5 +1,5 @@
 Flow report for MatrixLinearRegression
-Fri Dec  1 12:59:09 2023
+Fri Dec  1 13:16:51 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Fri Dec  1 12:59:09 2023          ;
+; Flow Status                     ; Successful - Fri Dec  1 13:16:51 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 12/01/2023 12:58:53    ;
+; Start date & time ; 12/01/2023 13:16:32    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; MatrixLinearRegression ;
 +-------------------+------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 9447189936744.170144633216532          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 9447189936744.170144739205840          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -102,8 +102,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4922 MB             ; 00:00:21                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4919 MB             ; 00:00:23                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

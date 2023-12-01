@@ -1,17 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
-package newtype is
-    -- Definindo o tipo de array para as matrizes e vetores
-    type matrix_type is array (1 to 2, 1 to 2) of STD_LOGIC_VECTOR(7 downto 0);
-	 type int_matrix_type is array (1 to 2, 1 to 2) of integer;
-end newtype;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-use work.newtype.all;
+use work.MatrixPackage.all;
 
 entity MatrixLinearRegression is
 	PORT(
