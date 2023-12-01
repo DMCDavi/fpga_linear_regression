@@ -69,6 +69,7 @@ ENTITY SerialUartCommunication IS
 		rx_error	:	OUT	STD_LOGIC;										--start, parity, or stop bit error detected
 		rx_data	:	OUT	STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);	--data received
 		tx_busy	:	OUT	STD_LOGIC;  									--transmission in progress
+		tx_done  : OUT STD_LOGIC;
 		tx			:	OUT	STD_LOGIC);										--transmit pin
 END SerialUartCommunication;
 		
@@ -189,10 +190,12 @@ BEGIN
 			tx_count := 0;																			--clear transmit bit counter
 			tx <= '1';																				--set tx pin to idle value of high
 			tx_busy <= '1';																		--set transmit busy signal to indicate unavailable
+			tx_done <= '0';
 			tx_state <= idle;																		--set tx state machine to ready state
 		ELSIF(clk'EVENT AND clk = '1') THEN
 			CASE tx_state IS
 				WHEN idle =>																	--idle state
+					tx_done <= '0';
 					IF(tx_ena = '1') THEN														--new transaction latched in
 						tx_buffer(d_width+1 DOWNTO 0) <=  tx_data & '0' & '1';			--latch in data for transmission and start/stop bits
 						IF(parity = 1) THEN															--if parity is used
@@ -214,6 +217,7 @@ BEGIN
 						tx_state <= transmit;														--remain in transmit state
 					ELSE																				--all bits transmitted
 						tx_state <= idle;																--return to idle state
+						tx_done <= '1';
 					END IF;
 			END CASE;
 			tx <= tx_buffer(0);																--output last bit in transmit transaction buffer

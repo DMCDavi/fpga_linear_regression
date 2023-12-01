@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/22.1std/projects/MatrixLinearRegression/simulation/qsim
 Ematrixlinearregression
-Z0 w1701281902
+Z0 w1701446173
 Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -22,13 +22,13 @@ Z9 8MatrixLinearRegression.vho
 Z10 FMatrixLinearRegression.vho
 l0
 L37
-VCY^<hoAW5A::RQSlZ90461
-!s100 i6Q9RzCN[ij:mUXIoA21<0
+VF_DF?;hLQTRZ;8oYnN^Lh2
+!s100 N_54E?cf9LB]k0N>7TF9M0
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1701281903
+Z12 !s110 1701446173
 !i10b 1
-Z13 !s108 1701281903.000000
+Z13 !s108 1701446173.000000
 Z14 !s90 -work|work|MatrixLinearRegression.vho|
 Z15 !s107 MatrixLinearRegression.vho|
 !i113 1
@@ -42,11 +42,11 @@ R4
 R5
 R6
 R7
-DEx4 work 22 matrixlinearregression 0 22 CY^<hoAW5A::RQSlZ90461
-l3553
-L234
-V3QMb:n79J0Lf^5EkLb^K>3
-!s100 L0M7<gY@mknmKDUVFRekz0
+DEx4 work 22 matrixlinearregression 0 22 F_DF?;hLQTRZ;8oYnN^Lh2
+l189
+L46
+VF=Qa^Ydm0aCjRnC5KFNa70
+!s100 ?1o4N??UglQR]<hbb@_QM3
 R11
 32
 R12
@@ -58,12 +58,12 @@ R15
 R16
 R17
 Ematrixlinearregression_vhd_vec_tst
-Z18 w1701281901
+Z18 w1701446172
 R5
 R6
 R8
-8Waveform1.vwf.vht
-FWaveform1.vwf.vht
+Z19 8Waveform3.vwf.vht
+Z20 FWaveform3.vwf.vht
 l0
 L32
 VUkjOnATfKd2dPH@5GlMKi0
@@ -73,28 +73,26 @@ R11
 R12
 !i10b 1
 R13
-!s90 -work|work|Waveform1.vwf.vht|
-!s107 Waveform1.vwf.vht|
+Z21 !s90 -work|work|Waveform3.vwf.vht|
+Z22 !s107 Waveform3.vwf.vht|
 !i113 1
 R16
 R17
 Amatrixlinearregression_arch
 R5
 R6
-DEx4 work 34 matrixlinearregression_vhd_vec_tst 0 22 UkjOnATfKd2dPH@5GlMKi0
-l57
+Z23 DEx4 work 34 matrixlinearregression_vhd_vec_tst 0 22 UkjOnATfKd2dPH@5GlMKi0
+l49
 L34
-V0`;c49fIk5YnfRFSObOBG1
-!s100 SjPcLbN0L:5;TM7oLVTV;1
+Z24 VLf5XKg@QC4ofYhBdBPE>H3
+Z25 !s100 km^hKAgRlimd<Y4;mnH^R0
 R11
 32
-!s110 1701281568
+R12
 !i10b 1
-!s108 1701281568.000000
-!s90 -work|work|Waveform.vwf.vht|
-!s107 Waveform.vwf.vht|
+R13
+R21
+R22
 !i113 1
 R16
 R17
-FWaveform.vwf.vht
-8Waveform.vwf.vht

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MatrixLinearRegression
-Thu Nov 30 17:06:11 2023
+Fri Dec  1 12:59:09 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -15,21 +15,22 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_state
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: SerialUartCommunication:uart_comm
- 14. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx
- 15. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx
- 16. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty
- 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 18. Port Connectivity Checks: "MatrixOperations:mo|MatrixMultiplier:multiply_xty"
- 19. Port Connectivity Checks: "MatrixOperations:mo|MatrixInverter:invert_xtx"
- 20. Port Connectivity Checks: "MatrixOperations:mo"
- 21. Port Connectivity Checks: "SerialUartCommunication:uart_comm"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: SerialUartCommunication:uart_comm
+ 15. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx
+ 16. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx
+ 17. Parameter Settings for User Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty
+ 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 19. Port Connectivity Checks: "MatrixOperations:mo|MatrixMultiplier:multiply_xty"
+ 20. Port Connectivity Checks: "MatrixOperations:mo|MatrixInverter:invert_xtx"
+ 21. Port Connectivity Checks: "MatrixOperations:mo"
+ 22. Port Connectivity Checks: "SerialUartCommunication:uart_comm"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -56,13 +57,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 30 17:06:11 2023          ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec  1 12:59:09 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 296                                            ;
+; Total registers                 ; 360                                            ;
 ; Total pins                      ; 13                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -213,16 +214,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------------------------+
 ; Resource                                    ; Usage                                          ;
 +---------------------------------------------+------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1065                                           ;
+; Estimate of Logic utilization (ALMs needed) ; 1172                                           ;
 ;                                             ;                                                ;
-; Combinational ALUT usage for logic          ; 1915                                           ;
-;     -- 7 input functions                    ; 1                                              ;
-;     -- 6 input functions                    ; 206                                            ;
-;     -- 5 input functions                    ; 235                                            ;
+; Combinational ALUT usage for logic          ; 2069                                           ;
+;     -- 7 input functions                    ; 0                                              ;
+;     -- 6 input functions                    ; 268                                            ;
+;     -- 5 input functions                    ; 240                                            ;
 ;     -- 4 input functions                    ; 465                                            ;
-;     -- <=3 input functions                  ; 1008                                           ;
+;     -- <=3 input functions                  ; 1096                                           ;
 ;                                             ;                                                ;
-; Dedicated logic registers                   ; 296                                            ;
+; Dedicated logic registers                   ; 360                                            ;
 ;                                             ;                                                ;
 ; I/O pins                                    ; 13                                             ;
 ;                                             ;                                                ;
@@ -230,8 +231,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                ;
 ; Maximum fan-out node                        ; SerialUartCommunication:uart_comm|rx_ready_aux ;
 ; Maximum fan-out                             ; 129                                            ;
-; Total fan-out                               ; 7762                                           ;
-; Average fan-out                             ; 3.46                                           ;
+; Total fan-out                               ; 8536                                           ;
+; Average fan-out                             ; 3.47                                           ;
 +---------------------------------------------+------------------------------------------------+
 
 
@@ -240,11 +241,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Entity Name             ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |MatrixLinearRegression                ; 1915 (400)          ; 296 (209)                 ; 0                 ; 8          ; 13   ; 0            ; |MatrixLinearRegression                                                                                              ; MatrixLinearRegression  ; work         ;
+; |MatrixLinearRegression                ; 2069 (546)          ; 360 (272)                 ; 0                 ; 8          ; 13   ; 0            ; |MatrixLinearRegression                                                                                              ; MatrixLinearRegression  ; work         ;
 ;    |FrequencyDivider:freq|             ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|FrequencyDivider:freq                                                                        ; FrequencyDivider        ; work         ;
-;    |MatrixOperations:mo|               ; 24 (0)              ; 0 (0)                     ; 0                 ; 8          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo                                                                          ; MatrixOperations        ; work         ;
-;       |MatrixMultiplier:multiply_xtx|  ; 24 (24)             ; 0 (0)                     ; 0                 ; 8          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:multiply_xtx                                            ; MatrixMultiplier        ; work         ;
-;    |SerialUartCommunication:uart_comm| ; 57 (57)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|SerialUartCommunication:uart_comm                                                            ; SerialUartCommunication ; work         ;
+;    |MatrixOperations:mo|               ; 32 (0)              ; 0 (0)                     ; 0                 ; 8          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo                                                                          ; MatrixOperations        ; work         ;
+;       |MatrixMultiplier:multiply_xtx|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 8          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:multiply_xtx                                            ; MatrixMultiplier        ; work         ;
+;    |SerialUartCommunication:uart_comm| ; 57 (57)             ; 61 (61)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|SerialUartCommunication:uart_comm                                                            ; SerialUartCommunication ; work         ;
 ;    |lpm_divide:Mod0|                   ; 1401 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|lpm_divide:Mod0                                                                              ; lpm_divide              ; work         ;
 ;       |lpm_divide_uio:auto_generated|  ; 1401 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio          ; work         ;
 ;          |abs_divider_4dg:divider|     ; 1401 (74)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg         ; work         ;
@@ -278,17 +279,27 @@ Encoding Type:  One-Hot
 +-------------------+-------------------+------------------+-------------------------+
 
 
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; tx_ena                                ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 296   ;
-; Number of registers using Synchronous Clear  ; 159   ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Total registers                              ; 360   ;
+; Number of registers using Synchronous Clear  ; 222   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 133   ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -301,37 +312,40 @@ Encoding Type:  One-Hot
 ; SerialUartCommunication:uart_comm|tx           ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[0] ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[1] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[2] ; 1       ;
 ; \p2:i[0]                                       ; 3       ;
+; SerialUartCommunication:uart_comm|tx_buffer[2] ; 1       ;
+; \p2:j[0]                                       ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[3] ; 1       ;
 ; \p1:i[0]                                       ; 7       ;
 ; \p1:j[0]                                       ; 5       ;
-; \p2:j[0]                                       ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[4] ; 1       ;
 ; \p1:index[0]                                   ; 4       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[5] ; 1       ;
+; \p3:i[0]                                       ; 3       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[6] ; 1       ;
+; \p3:j[0]                                       ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[7] ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[8] ; 1       ;
-; SerialUartCommunication:uart_comm|tx_buffer[9] ; 1       ;
-; Total number of inverted registers = 16        ;         ;
+; SerialUartCommunication:uart_comm|tx_buffer[9] ; 2       ;
+; Total number of inverted registers = 18        ;         ;
 +------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_count[1]          ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\p2:j[22]                                              ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\p1:j[1]                                               ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[2]          ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[1]          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[1]         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[5]         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Add0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MatrixLinearRegression|digit[7]~reg0                                  ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\p2:j[20]                                      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\p1:j[29]                                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MatrixLinearRegression|tx_data[7]                                     ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\p3:j[3]                                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[3]  ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[1]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[0] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -451,36 +465,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 296                         ;
-;     CLR               ; 13                          ;
-;     CLR SCLR          ; 9                           ;
-;     CLR SLD           ; 1                           ;
-;     ENA               ; 52                          ;
-;     ENA CLR           ; 19                          ;
+; arriav_ff             ; 360                         ;
+;     CLR               ; 18                          ;
+;     CLR SCLR          ; 10                          ;
+;     ENA               ; 51                          ;
+;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 62                          ;
-;     SCLR              ; 88                          ;
-;     plain             ; 52                          ;
-; arriav_lcell_comb     ; 1916                        ;
-;     arith             ; 888                         ;
+;     SCLR              ; 150                         ;
+;     plain             ; 54                          ;
+; arriav_lcell_comb     ; 2070                        ;
+;     arith             ; 976                         ;
 ;         0 data inputs ; 33                          ;
-;         1 data inputs ; 479                         ;
-;         2 data inputs ; 71                          ;
+;         1 data inputs ; 543                         ;
+;         2 data inputs ; 95                          ;
 ;         3 data inputs ; 50                          ;
 ;         4 data inputs ; 255                         ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 1027                        ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 299                         ;
-;         3 data inputs ; 74                          ;
+;     normal            ; 1094                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 297                         ;
+;         3 data inputs ; 77                          ;
 ;         4 data inputs ; 210                         ;
-;         5 data inputs ; 235                         ;
-;         6 data inputs ; 206                         ;
+;         5 data inputs ; 240                         ;
+;         6 data inputs ; 268                         ;
 ; arriav_mac            ; 8                           ;
 ; boundary_port         ; 13                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 120.20                      ;
-; Average LUT depth     ; 80.60                       ;
+; Average LUT depth     ; 74.12                       ;
 +-----------------------+-----------------------------+
 
 
@@ -499,7 +510,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Nov 30 17:05:50 2023
+    Info: Processing started: Fri Dec  1 12:58:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MatrixLinearRegression -c MatrixLinearRegression
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 3 design units, including 1 entities, in source file matrixlinearregression.vhd
@@ -520,25 +531,28 @@ Warning (12019): Can't analyze file -- file UartRx.vhd is missing
 Warning (12019): Can't analyze file -- file UartTx.vhd is missing
 Info (12021): Found 3 design units, including 1 entities, in source file serialuartcommunication.vhd
     Info (12022): Found design unit 1: uart2_pkg File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 26
-    Info (12022): Found design unit 2: SerialUartCommunication-logic File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 75
+    Info (12022): Found design unit 2: SerialUartCommunication-logic File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 76
     Info (12023): Found entity 1: SerialUartCommunication File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 54
 Info (12021): Found 2 design units, including 1 entities, in source file matrixoperations.vhd
     Info (12022): Found design unit 1: MatrixOperations-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 14
     Info (12023): Found entity 1: MatrixOperations File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 6
+Info (12021): Found 2 design units, including 0 entities, in source file fixedpointoperations.vhd
+    Info (12022): Found design unit 1: FixedPointOperations File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 7
+    Info (12022): Found design unit 2: FixedPointOperations-body File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 14
 Info (12127): Elaborating entity "MatrixLinearRegression" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(61): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 61
-Warning (10873): Using initial value X (don't care) for net "Y[1][2]" at MatrixLinearRegression.vhd(64) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 64
-Warning (10873): Using initial value X (don't care) for net "Y[2][2]" at MatrixLinearRegression.vhd(64) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(62): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 62
+Warning (10873): Using initial value X (don't care) for net "Y[1][2]" at MatrixLinearRegression.vhd(65) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 65
+Warning (10873): Using initial value X (don't care) for net "Y[2][2]" at MatrixLinearRegression.vhd(65) File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 65
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Y" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
 Warning (12125): Using design file frequencydivider.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: FrequencyDivider-behavior File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 11
     Info (12023): Found entity 1: FrequencyDivider File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 4
-Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 68
-Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(133): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 133
-Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 113
+Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 69
+Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(134): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 134
+Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 115
 Warning (10036): Verilog HDL or VHDL warning at MatrixOperations.vhd(40): object "Inv" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 40
 Warning (10036): Verilog HDL or VHDL warning at MatrixOperations.vhd(40): object "XTY" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 40
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
@@ -574,9 +588,9 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_out" into its bus
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 89
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 89
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 91
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -595,15 +609,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "init_transmission" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 20
-Info (21057): Implemented 2076 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2251 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 2055 logic cells
+    Info (21061): Implemented 2230 logic cells
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4928 megabytes
-    Info: Processing ended: Thu Nov 30 17:06:11 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4922 megabytes
+    Info: Processing ended: Fri Dec  1 12:59:09 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:21
 
 

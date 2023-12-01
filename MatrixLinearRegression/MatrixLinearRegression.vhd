@@ -37,6 +37,7 @@ architecture Behavioral of MatrixLinearRegression is
 			rx_error	:	OUT	STD_LOGIC;										--start, parity, or stop bit error detected
 			rx_data	:	OUT	STD_LOGIC_VECTOR(7 DOWNTO 0);	--data received
 			tx_busy	:	OUT	STD_LOGIC;  									--transmission in progress
+			tx_done : OUT STD_LOGIC;
 			tx			:	OUT	STD_LOGIC
         );
     end component;
@@ -58,7 +59,7 @@ architecture Behavioral of MatrixLinearRegression is
 
     signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
     signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
-    signal tx_busy, rx_ready, tx_ena, new_clk : STD_LOGIC;
+    signal tx_busy, rx_ready, tx_ena, new_clk, tx_done : STD_LOGIC;
 
     -- Sinais para a matriz X e Y
 	 signal X, Y, B : matrix_type;
@@ -79,6 +80,7 @@ begin
         tx_data => tx_data,
         rx_ready => rx_ready,
         tx_busy => tx_busy,
+		  tx_done => tx_done,
 		  tx_ena => tx_ena
     );
 	 
@@ -120,8 +122,6 @@ begin
 		variable i, j: integer := 1;
 	 begin
 		if rising_edge(new_clk) then
-			tx_ena <= not tx_ena;
-			tx_data <= B(i,j);
 			digit <= B(i,j);
 				j := j + 1;
 				if j > 2 then
@@ -136,15 +136,22 @@ begin
 		end if;
 	 end process p2;
 	 
-	-- p3: process(B)
-	 --begin
-	  --    for i in 1 to 2 loop
-     --       for j in 1 to 2 loop
-		--			tx_ena <= '1';
-     --           tx_data <= B(i,j);
-		--			 tx_ena <= '0';
-     --       end loop;
-     --   end loop;
-    --end process p3;
+	 p3: process
+		variable i, j: integer := 1;
+	 begin
+		tx_ena <= '1';
+	 wait until tx_done = '1';
+			tx_data <= B(i,j);
+				j := j + 1;
+				if j > 2 then
+					j := 1;
+					i := i + 1;
+				end if;
+				
+				if i > 2 then
+					i := 1;
+					j := 1;
+				end if;	
+    end process p3;
 	
 end Behavioral;

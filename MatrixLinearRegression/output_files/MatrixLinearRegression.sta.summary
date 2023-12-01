@@ -3,147 +3,195 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : -111.998
-TNS   : -9387.898
+Slack : -109.415
+TNS   : -9168.107
 
 Type  : Slow 1100mV 85C Model Setup 'FrequencyDivider:freq|local_out'
-Slack : -8.603
-TNS   : -669.103
+Slack : -8.605
+TNS   : -613.357
+
+Type  : Slow 1100mV 85C Model Setup 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -8.255
+TNS   : -585.590
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -5.566
-TNS   : -268.458
+Slack : -5.413
+TNS   : -234.344
+
+Type  : Slow 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
+Slack : 0.175
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'FrequencyDivider:freq|local_out'
-Slack : 0.361
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|tx_done'
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : 0.875
+Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|rx_ready_aux'
 Slack : -2.225
-TNS   : -763.467
+TNS   : -763.171
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -80.857
+TNS   : -80.841
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FrequencyDivider:freq|local_out'
 Slack : -0.538
-TNS   : -77.214
+TNS   : -61.577
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -0.538
+TNS   : -60.913
 
 Type  : Slow 1100mV 0C Model Setup 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : -112.797
-TNS   : -9459.509
+Slack : -109.907
+TNS   : -9217.326
 
 Type  : Slow 1100mV 0C Model Setup 'FrequencyDivider:freq|local_out'
-Slack : -8.828
-TNS   : -682.590
+Slack : -8.688
+TNS   : -622.318
+
+Type  : Slow 1100mV 0C Model Setup 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -8.317
+TNS   : -598.141
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -5.640
-TNS   : -262.023
+Slack : -5.553
+TNS   : -229.412
+
+Type  : Slow 1100mV 0C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
+Slack : 0.162
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.114
+Slack : 0.288
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'FrequencyDivider:freq|local_out'
-Slack : 0.364
+Slack : 0.360
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : 0.907
+Type  : Slow 1100mV 0C Model Hold 'SerialUartCommunication:uart_comm|tx_done'
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|rx_ready_aux'
 Slack : -2.225
-TNS   : -762.534
+TNS   : -762.821
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -83.296
+TNS   : -83.310
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FrequencyDivider:freq|local_out'
 Slack : -0.538
-TNS   : -76.634
+TNS   : -60.661
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -0.538
+TNS   : -60.566
 
 Type  : Fast 1100mV 85C Model Setup 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : -58.161
-TNS   : -4796.295
+Slack : -56.575
+TNS   : -4686.672
 
 Type  : Fast 1100mV 85C Model Setup 'FrequencyDivider:freq|local_out'
-Slack : -3.845
-TNS   : -292.868
+Slack : -3.933
+TNS   : -276.202
+
+Type  : Fast 1100mV 85C Model Setup 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -3.723
+TNS   : -261.658
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.060
-TNS   : -93.292
+Slack : -2.985
+TNS   : -75.994
 
-Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.020
+Type  : Fast 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
+Slack : 0.032
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'FrequencyDivider:freq|local_out'
-Slack : 0.111
+Slack : 0.110
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : 0.311
+Type  : Fast 1100mV 85C Model Hold 'SerialUartCommunication:uart_comm|tx_done'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.169
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|rx_ready_aux'
 Slack : -1.702
-TNS   : -519.300
+TNS   : -520.552
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.449
-TNS   : -10.579
+Slack : -0.365
+TNS   : -10.589
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -0.025
+TNS   : -0.135
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FrequencyDivider:freq|local_out'
-Slack : -0.145
-TNS   : -5.038
+Slack : -0.005
+TNS   : -0.015
 
 Type  : Fast 1100mV 0C Model Setup 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : -53.332
-TNS   : -4405.053
+Slack : -51.505
+TNS   : -4273.759
 
 Type  : Fast 1100mV 0C Model Setup 'FrequencyDivider:freq|local_out'
-Slack : -3.484
-TNS   : -267.130
+Slack : -3.556
+TNS   : -251.170
+
+Type  : Fast 1100mV 0C Model Setup 'SerialUartCommunication:uart_comm|tx_done'
+Slack : -3.353
+TNS   : -236.521
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.740
-TNS   : -77.177
+Slack : -2.710
+TNS   : -60.754
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.236
-TNS   : -2.494
-
-Type  : Fast 1100mV 0C Model Hold 'FrequencyDivider:freq|local_out'
-Slack : 0.093
-TNS   : 0.000
+Slack : -0.092
+TNS   : -0.254
 
 Type  : Fast 1100mV 0C Model Hold 'SerialUartCommunication:uart_comm|rx_ready_aux'
-Slack : 0.288
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'FrequencyDivider:freq|local_out'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'SerialUartCommunication:uart_comm|tx_done'
+Slack : 0.092
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|rx_ready_aux'
 Slack : -1.702
-TNS   : -515.057
+TNS   : -516.295
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.429
-TNS   : -10.609
+Slack : -0.366
+TNS   : -10.617
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SerialUartCommunication:uart_comm|tx_done'
+Slack : 0.013
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FrequencyDivider:freq|local_out'
-Slack : -0.075
-TNS   : -1.791
+Slack : 0.036
+TNS   : 0.000
 
 ------------------------------------------------------------

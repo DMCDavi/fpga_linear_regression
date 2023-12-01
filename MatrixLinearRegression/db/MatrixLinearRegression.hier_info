@@ -58,6 +58,7 @@ clk => tx_buffer[7].CLK
 clk => tx_buffer[8].CLK
 clk => tx_buffer[9].CLK
 clk => tx_state.CLK
+clk => tx_done~reg0.CLK
 clk => tx_busy~reg0.CLK
 clk => tx~reg0.CLK
 clk => tx_count[0].CLK
@@ -145,6 +146,7 @@ reset_n => count_baud[6].ACLR
 reset_n => count_baud[7].ACLR
 reset_n => count_baud[8].ACLR
 reset_n => tx_state.ACLR
+reset_n => tx_done~reg0.ACLR
 reset_n => tx_busy~reg0.PRESET
 reset_n => tx~reg0.PRESET
 reset_n => tx_count[0].ACLR
@@ -220,6 +222,7 @@ rx_data[5] <= rx_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_data[6] <= rx_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_data[7] <= rx_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx_busy <= tx_busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx_done <= tx_done~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
