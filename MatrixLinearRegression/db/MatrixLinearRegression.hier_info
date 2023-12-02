@@ -1,5 +1,4 @@
 |MatrixLinearRegression
-clk => FrequencyDivider:freq.clk
 clk => SerialUartCommunication:uart_comm.clk
 reset => SerialUartCommunication:uart_comm.reset_n
 reset => Xr[2][2][0].ACLR
@@ -319,45 +318,6 @@ reset => X[2][2][1].OUTPUTSELECT
 init_transmission => SerialUartCommunication:uart_comm.tx_ena
 rx => SerialUartCommunication:uart_comm.rx
 tx <= SerialUartCommunication:uart_comm.tx
-digit[0] <= digit[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[1] <= digit[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[2] <= digit[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[3] <= digit[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[4] <= digit[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[5] <= digit[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[6] <= digit[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-digit[7] <= digit[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|MatrixLinearRegression|FrequencyDivider:freq
-clk => local_out.CLK
-clk => iterations[0].CLK
-clk => iterations[1].CLK
-clk => iterations[2].CLK
-clk => iterations[3].CLK
-clk => iterations[4].CLK
-clk => iterations[5].CLK
-clk => iterations[6].CLK
-clk => iterations[7].CLK
-clk => iterations[8].CLK
-clk => iterations[9].CLK
-clk => iterations[10].CLK
-clk => iterations[11].CLK
-clk => iterations[12].CLK
-clk => iterations[13].CLK
-clk => iterations[14].CLK
-clk => iterations[15].CLK
-clk => iterations[16].CLK
-clk => iterations[17].CLK
-clk => iterations[18].CLK
-clk => iterations[19].CLK
-clk => iterations[20].CLK
-clk => iterations[21].CLK
-clk => iterations[22].CLK
-clk => iterations[23].CLK
-clk => iterations[24].CLK
-clk => iterations[25].CLK
-div_out <= local_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MatrixLinearRegression|SerialUartCommunication:uart_comm

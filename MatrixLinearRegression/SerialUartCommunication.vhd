@@ -42,6 +42,7 @@ PACKAGE uart2_pkg IS
 				rx_error	:	OUT	STD_LOGIC;								--start, parity, or stop bit error detected
 				rx_data	:	OUT	STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);		--data received
 				tx_busy	:	OUT	STD_LOGIC;  								--transmission in progress
+				tx_done  :  OUT STD_LOGIC;											--transmission done
 				tx			:	OUT	STD_LOGIC								--transmit pin
 			);
 	END COMPONENT;
@@ -69,7 +70,7 @@ ENTITY SerialUartCommunication IS
 		rx_error	:	OUT	STD_LOGIC;										--start, parity, or stop bit error detected
 		rx_data	:	OUT	STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);	--data received
 		tx_busy	:	OUT	STD_LOGIC;  									--transmission in progress
-		tx_done  : OUT STD_LOGIC;
+		tx_done  :  OUT STD_LOGIC;											--transmission done
 		tx			:	OUT	STD_LOGIC);										--transmit pin
 END SerialUartCommunication;
 		

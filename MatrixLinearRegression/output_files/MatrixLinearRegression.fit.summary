@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sat Dec  2 14:55:59 2023
+Fitter Status : Successful - Sat Dec  2 17:28:21 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : MatrixLinearRegression
 Top-level Entity Name : MatrixLinearRegression
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 10,188 / 18,480 ( 55 % )
-Total registers : 436
-Total pins : 13 / 224 ( 6 % )
+Logic utilization (in ALMs) : 9,979 / 18,480 ( 54 % )
+Total registers : 324
+Total pins : 5 / 224 ( 2 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )

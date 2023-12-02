@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MatrixLinearRegression
-Sat Dec  2 14:58:58 2023
+Sat Dec  2 17:21:11 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -21,33 +21,33 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Parameter Settings for User Entity Instance: SerialUartCommunication:uart_comm
  15. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1
- 16. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3
- 18. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2
- 19. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5
- 20. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4
- 21. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7
+ 16. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3
+ 17. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5
+ 18. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7
+ 19. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2
+ 21. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4
  22. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6
  23. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div5
  24. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div4
  25. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div5
  26. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div4
  27. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div7
- 28. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div1
- 29. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div0
- 30. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0
- 31. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div6
- 32. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div7
- 33. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div6
- 34. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div3
- 35. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div2
- 36. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3
+ 28. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div7
+ 29. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div6
+ 30. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3
+ 31. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div1
+ 32. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0
+ 34. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div6
+ 35. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div3
+ 36. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div2
  37. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div2
  38. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div1
- 39. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div1
- 40. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div0
- 41. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div7
- 42. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div6
+ 39. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div7
+ 40. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div6
+ 41. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div1
+ 42. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div0
  43. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
  44. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div3
  45. Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div2
@@ -84,14 +84,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Dec  2 14:58:57 2023          ;
+; Analysis & Synthesis Status     ; Successful - Sat Dec  2 17:21:10 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; MatrixLinearRegression                         ;
 ; Top-level Entity Name           ; MatrixLinearRegression                         ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 408                                            ;
-; Total pins                      ; 13                                             ;
+; Total registers                 ; 309                                            ;
+; Total pins                      ; 5                                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 54                                             ;
@@ -205,11 +205,11 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -226,7 +226,6 @@ https://fpgasoftware.intel.com/eula.
 ; MatrixOperations.vhd             ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd        ;         ;
 ; FixedPointOperations.vhd         ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd    ;         ;
 ; MatrixPackage.vhd                ; yes             ; User VHDL File               ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixPackage.vhd           ;         ;
-; frequencydivider.vhd             ; yes             ; Auto-Found VHDL File         ; D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
@@ -256,25 +255,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 10036       ;
+; Estimate of Logic utilization (ALMs needed) ; 9828        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 19754       ;
-;     -- 7 input functions                    ; 2           ;
-;     -- 6 input functions                    ; 308         ;
-;     -- 5 input functions                    ; 1517        ;
-;     -- 4 input functions                    ; 4548        ;
-;     -- <=3 input functions                  ; 13379       ;
+; Combinational ALUT usage for logic          ; 19406       ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 241         ;
+;     -- 5 input functions                    ; 1519        ;
+;     -- 4 input functions                    ; 4543        ;
+;     -- <=3 input functions                  ; 13102       ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 408         ;
+; Dedicated logic registers                   ; 309         ;
 ;                                             ;             ;
-; I/O pins                                    ; 13          ;
+; I/O pins                                    ; 5           ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 54          ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
 ; Maximum fan-out                             ; 287         ;
-; Total fan-out                               ; 64857       ;
-; Average fan-out                             ; 3.20        ;
+; Total fan-out                               ; 63467       ;
+; Average fan-out                             ; 3.21        ;
 +---------------------------------------------+-------------+
 
 
@@ -283,9 +282,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                      ; Entity Name             ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |MatrixLinearRegression                     ; 19754 (708)         ; 408 (320)                 ; 0                 ; 54         ; 13   ; 0            ; |MatrixLinearRegression                                                                                                                                                  ; MatrixLinearRegression  ; work         ;
-;    |FrequencyDivider:freq|                  ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|FrequencyDivider:freq                                                                                                                            ; FrequencyDivider        ; work         ;
-;    |MatrixOperations:mo|                    ; 17556 (0)           ; 0 (0)                     ; 0                 ; 54         ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo                                                                                                                              ; MatrixOperations        ; work         ;
+; |MatrixLinearRegression                     ; 19406 (561)         ; 309 (248)                 ; 0                 ; 54         ; 5    ; 0            ; |MatrixLinearRegression                                                                                                                                                  ; MatrixLinearRegression  ; work         ;
+;    |MatrixOperations:mo|                    ; 17388 (0)           ; 0 (0)                     ; 0                 ; 54         ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo                                                                                                                              ; MatrixOperations        ; work         ;
 ;       |MatrixInverter:invert_xtx|           ; 5436 (168)          ; 0 (0)                     ; 0                 ; 6          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx                                                                                                    ; MatrixInverter          ; work         ;
 ;          |lpm_divide:Div0|                  ; 332 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0                                                                                    ; lpm_divide              ; work         ;
 ;             |lpm_divide_vqo:auto_generated| ; 332 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0|lpm_divide_vqo:auto_generated                                                      ; lpm_divide_vqo          ; work         ;
@@ -329,45 +327,45 @@ https://fpgasoftware.intel.com/eula.
 ;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                              ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider        ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num       ; lpm_abs_4p9             ; work         ;
-;       |MatrixMultiplier:final_multiply|     ; 4040 (176)          ; 0 (0)                     ; 0                 ; 16         ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply                                                                                              ; MatrixMultiplier        ; work         ;
-;          |lpm_divide:Div0|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;       |MatrixMultiplier:final_multiply|     ; 3872 (136)          ; 0 (0)                     ; 0                 ; 16         ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply                                                                                              ; MatrixMultiplier        ; work         ;
+;          |lpm_divide:Div0|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div1|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div1|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div2|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div2|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div3|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div3|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div3|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div4|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div4|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div5|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div5|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div6|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div6|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div6|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
-;          |lpm_divide:Div7|                  ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7                                                                              ; lpm_divide              ; work         ;
-;             |lpm_divide_bpo:auto_generated| ; 483 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
-;                |abs_divider_kbg:divider|    ; 483 (32)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
+;          |lpm_divide:Div7|                  ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7                                                                              ; lpm_divide              ; work         ;
+;             |lpm_divide_bpo:auto_generated| ; 467 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo          ; work         ;
+;                |abs_divider_kbg:divider|    ; 467 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg         ; work         ;
 ;                   |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove           ; work         ;
 ;                   |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9             ; work         ;
 ;       |MatrixMultiplier:multiply_xtx|       ; 4040 (176)          ; 0 (0)                     ; 0                 ; 16         ; 0    ; 0            ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:multiply_xtx                                                                                                ; MatrixMultiplier        ; work         ;
@@ -552,8 +550,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 408   ;
-; Number of registers using Synchronous Clear  ; 253   ;
+; Total registers                              ; 309   ;
+; Number of registers using Synchronous Clear  ; 165   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 219   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -570,42 +568,38 @@ Encoding Type:  One-Hot
 ; SerialUartCommunication:uart_comm|tx           ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[0] ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[1] ; 1       ;
-; \output_debug:i[0]                             ; 3       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[2] ; 1       ;
-; \output_debug:j[0]                             ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[3] ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[4] ; 1       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[5] ; 1       ;
-; \send_results:i[0]                             ; 3       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[6] ; 1       ;
-; \send_results:j[0]                             ; 1       ;
+; \send_results:i[0]                             ; 3       ;
 ; SerialUartCommunication:uart_comm|tx_buffer[7] ; 1       ;
+; \send_results:j[0]                             ; 1       ;
+; SerialUartCommunication:uart_comm|tx_buffer[8] ; 1       ;
+; SerialUartCommunication:uart_comm|tx_buffer[9] ; 1       ;
 ; \receive_data:z[0]                             ; 3       ;
 ; \receive_data:i[0]                             ; 7       ;
 ; \receive_data:j[0]                             ; 5       ;
-; SerialUartCommunication:uart_comm|tx_buffer[8] ; 1       ;
 ; \receive_data:index[0]                         ; 4       ;
-; SerialUartCommunication:uart_comm|tx_buffer[9] ; 1       ;
-; Total number of inverted registers = 19        ;         ;
+; Total number of inverted registers = 17        ;         ;
 +------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MatrixLinearRegression|digit[1]~reg0                                  ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\output_debug:j[21]                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MatrixLinearRegression|tx_data[1]                                     ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\receive_data:j[25]                            ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\send_results:j[26]                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_count[0]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[2]  ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[0]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[0] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\send_results:j[13]                                      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MatrixLinearRegression|\receive_data:j[21]                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_count[0]            ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_count[1]            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|os_count[1]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[1]           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MatrixLinearRegression|SerialUartCommunication:uart_comm|tx_buffer[5]           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MatrixLinearRegression|MatrixOperations:mo|MatrixMultiplier:final_multiply|Add0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -625,29 +619,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1 ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                       ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                    ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                    ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                    ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0 ;
 +------------------------+----------------+----------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                       ;
 +------------------------+----------------+----------------------------------------------------------------------------+
@@ -693,29 +664,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2 ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                       ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                    ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                    ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                    ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div5 ;
 +------------------------+----------------+----------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                       ;
@@ -739,7 +687,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4 ;
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7 ;
 +------------------------+----------------+----------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                       ;
 +------------------------+----------------+----------------------------------------------------------------------------+
@@ -762,7 +710,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div7 ;
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                       ;
++------------------------+----------------+----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                    ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                    ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div2 ;
++------------------------+----------------+----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                       ;
++------------------------+----------------+----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                    ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                    ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                    ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                             ;
++------------------------+----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div4 ;
 +------------------------+----------------+----------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                       ;
 +------------------------+----------------+----------------------------------------------------------------------------+
@@ -923,6 +917,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div7 ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                     ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div6 ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                     ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div1 ;
 +------------------------+----------------+--------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                     ;
@@ -1015,52 +1078,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div7 ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div6 ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div3 ;
 +------------------------+----------------+--------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                     ;
@@ -1103,29 +1120,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
 +------------------------+----------------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3 ;
-+------------------------+----------------+----------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                 ;
-+------------------------+----------------+----------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                              ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                              ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                              ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                              ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                              ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
-+------------------------+----------------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1176,52 +1170,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div1 ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
-; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
-; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
-+------------------------+----------------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div7 ;
 +------------------------+----------------+--------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                     ;
@@ -1246,6 +1194,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div6 ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                     ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                     ;
++------------------------+----------------+--------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                  ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                  ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MatrixOperations:mo|MatrixMultiplier:multiply_xtx|lpm_divide:Div0 ;
 +------------------------+----------------+--------------------------------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                                                     ;
 +------------------------+----------------+--------------------------------------------------------------------------+
@@ -1382,20 +1376,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "MatrixOperations:mo" ;
-+------------+-------+----------+-----------------+
-; Port       ; Type  ; Severity ; Details         ;
-+------------+-------+----------+-----------------+
-; x[1][1][0] ; Input ; Info     ; Stuck at GND    ;
-; x[1][2][0] ; Input ; Info     ; Stuck at GND    ;
-; x[2][1][0] ; Input ; Info     ; Stuck at GND    ;
-; x[2][2][0] ; Input ; Info     ; Stuck at GND    ;
-; y[1][1][0] ; Input ; Info     ; Stuck at GND    ;
-; y[1][2]    ; Input ; Info     ; Stuck at GND    ;
-; y[2][1][0] ; Input ; Info     ; Stuck at GND    ;
-; y[2][2]    ; Input ; Info     ; Stuck at GND    ;
-+------------+-------+----------+-----------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MatrixOperations:mo"                                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; x[1][1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; x[1][2][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; x[2][1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; x[2][2][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[1][1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[1][2]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[2][1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[2][2]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1][1][15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; b[1][2][15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; b[2][1][15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; b[2][2][15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -1415,31 +1413,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 408                         ;
+; arriav_ff             ; 309                         ;
 ;     CLR               ; 46                          ;
 ;     CLR SCLR          ; 10                          ;
 ;     ENA               ; 18                          ;
 ;     ENA CLR           ; 70                          ;
 ;     ENA CLR SCLR      ; 93                          ;
-;     SCLR              ; 150                         ;
-;     plain             ; 21                          ;
-; arriav_lcell_comb     ; 19755                       ;
-;     arith             ; 11070                       ;
+;     SCLR              ; 62                          ;
+;     plain             ; 10                          ;
+; arriav_lcell_comb     ; 19407                       ;
+;     arith             ; 10860                       ;
 ;         0 data inputs ; 1784                        ;
-;         1 data inputs ; 1950                        ;
-;         2 data inputs ; 1819                        ;
+;         1 data inputs ; 1796                        ;
+;         2 data inputs ; 1763                        ;
 ;         3 data inputs ; 1684                        ;
 ;         4 data inputs ; 2599                        ;
 ;         5 data inputs ; 1234                        ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 8477                        ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 8340                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 4416                        ;
-;         3 data inputs ; 1554                        ;
-;         4 data inputs ; 1914                        ;
-;         5 data inputs ; 283                         ;
-;         6 data inputs ; 308                         ;
+;         2 data inputs ; 4414                        ;
+;         3 data inputs ; 1489                        ;
+;         4 data inputs ; 1909                        ;
+;         5 data inputs ; 285                         ;
+;         6 data inputs ; 241                         ;
 ;     shared            ; 206                         ;
 ;         0 data inputs ; 34                          ;
 ;         1 data inputs ; 112                         ;
@@ -1447,10 +1445,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 3                           ;
 ;         4 data inputs ; 35                          ;
 ; arriav_mac            ; 54                          ;
-; boundary_port         ; 13                          ;
+; boundary_port         ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 156.40                      ;
-; Average LUT depth     ; 84.06                       ;
+; Average LUT depth     ; 85.13                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1459,7 +1457,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:23     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -1469,11 +1467,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sat Dec  2 14:58:23 2023
+    Info: Processing started: Sat Dec  2 17:20:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MatrixLinearRegression -c MatrixLinearRegression
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file matrixlinearregression.vhd
-    Info (12022): Found design unit 1: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 19
+    Info (12022): Found design unit 1: MatrixLinearRegression-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 18
     Info (12023): Found entity 1: MatrixLinearRegression File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file matrixinverter.vhd
     Info (12022): Found design unit 1: MatrixInverter-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixInverter.vhd Line: 14
@@ -1489,8 +1487,8 @@ Warning (12019): Can't analyze file -- file UartRx.vhd is missing
 Warning (12019): Can't analyze file -- file UartTx.vhd is missing
 Info (12021): Found 3 design units, including 1 entities, in source file serialuartcommunication.vhd
     Info (12022): Found design unit 1: uart2_pkg File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 26
-    Info (12022): Found design unit 2: SerialUartCommunication-logic File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 76
-    Info (12023): Found entity 1: SerialUartCommunication File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 54
+    Info (12022): Found design unit 2: SerialUartCommunication-logic File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 77
+    Info (12023): Found entity 1: SerialUartCommunication File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 55
 Info (12021): Found 2 design units, including 1 entities, in source file matrixoperations.vhd
     Info (12022): Found design unit 1: MatrixOperations-Behavioral File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 14
     Info (12023): Found entity 1: MatrixOperations File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 6
@@ -1500,20 +1498,16 @@ Info (12021): Found 2 design units, including 0 entities, in source file fixedpo
 Info (12021): Found 1 design units, including 0 entities, in source file matrixpackage.vhd
     Info (12022): Found design unit 1: MatrixPackage File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixPackage.vhd Line: 7
 Info (12127): Elaborating entity "MatrixLinearRegression" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(57): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 57
-Warning (10631): VHDL Process Statement warning at MatrixLinearRegression.vhd(84): inferring latch(es) for signal or variable "Yr", which holds its previous value in one or more paths through the process File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 84
+Warning (10036): Verilog HDL or VHDL warning at MatrixLinearRegression.vhd(48): object "tx_busy" assigned a value but never read File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at MatrixLinearRegression.vhd(68): inferring latch(es) for signal or variable "Yr", which holds its previous value in one or more paths through the process File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 68
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Xr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Y" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Yr" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
-Warning (12125): Using design file frequencydivider.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: FrequencyDivider-behavior File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 11
-    Info (12023): Found entity 1: FrequencyDivider File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/frequencydivider.vhd Line: 4
-Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:freq" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 64
-Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 70
-Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(134): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 134
-Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 142
+Info (12128): Elaborating entity "SerialUartCommunication" for hierarchy "SerialUartCommunication:uart_comm" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at SerialUartCommunication.vhd(135): signal "os_pulse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/SerialUartCommunication.vhd Line: 135
+Info (12128): Elaborating entity "MatrixOperations" for hierarchy "MatrixOperations:mo" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 126
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Y" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
@@ -1524,12 +1518,12 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "X" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Y" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
-Info (12128): Elaborating entity "MatrixTranspose" for hierarchy "MatrixOperations:mo|MatrixTranspose:transpose_x" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 44
+Info (12128): Elaborating entity "MatrixTranspose" for hierarchy "MatrixOperations:mo|MatrixTranspose:transpose_x" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 43
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
-Info (12128): Elaborating entity "MatrixMultiplier" for hierarchy "MatrixOperations:mo|MatrixMultiplier:multiply_xtx" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 50
+Info (12128): Elaborating entity "MatrixMultiplier" for hierarchy "MatrixOperations:mo|MatrixMultiplier:multiply_xtx" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 49
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "C" into its bus
@@ -1539,7 +1533,7 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "B" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "C" into its bus
-Info (12128): Elaborating entity "MatrixInverter" for hierarchy "MatrixOperations:mo|MatrixInverter:invert_xtx" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 57
+Info (12128): Elaborating entity "MatrixInverter" for hierarchy "MatrixOperations:mo|MatrixInverter:invert_xtx" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixOperations.vhd Line: 56
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_out" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrix_inversion:A_int" into its bus
@@ -1547,41 +1541,41 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "A_out" into its bus
 Info (278001): Inferred 33 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 95
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:final_multiply|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xty|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixInverter:invert_xtx|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div7" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div6" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 79
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MatrixOperations:mo|MatrixMultiplier:multiply_xtx|Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixMultiplier:final_multiply|lpm_divide:Div1" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1597,8 +1591,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_abs_kn9 File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/lpm_abs_kn9.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
     Info (12023): Found entity 1: lpm_abs_4p9 File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/lpm_abs_4p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div5" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div5" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1610,15 +1604,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/abs_
     Info (12023): Found entity 1: abs_divider_4dg File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/abs_divider_4dg.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
     Info (12023): Found entity 1: alt_u_div_o2f File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/alt_u_div_o2f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div4" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div4" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div4" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div5" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixMultiplier:multiply_xty|lpm_divide:Div5" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1632,22 +1640,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_03f File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/alt_u_div_03f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_6p9.tdf
     Info (12023): Found entity 1: lpm_abs_6p9 File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/lpm_abs_6p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div3" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div2" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 33
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div2" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div2" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 34
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
-Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div1" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 40
+Info (12130): Elaborated megafunction instantiation "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div1" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
+Info (12133): Instantiated megafunction "MatrixOperations:mo|MatrixInverter:invert_xtx|lpm_divide:Div1" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/FixedPointOperations.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "20"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1661,8 +1662,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_m2f File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/alt_u_div_m2f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_1p9.tdf
     Info (12023): Found entity 1: lpm_abs_1p9 File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/db/lpm_abs_1p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 95
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 95
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 79
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: D:/Backup/GitHub/fpga_linear_regression/MatrixLinearRegression/MatrixLinearRegression.vhd Line: 79
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1674,15 +1675,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20029 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19636 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 19962 logic cells
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 19577 logic cells
     Info (21062): Implemented 54 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5079 megabytes
-    Info: Processing ended: Sat Dec  2 14:58:58 2023
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5033 megabytes
+    Info: Processing ended: Sat Dec  2 17:21:11 2023
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:36
 
 

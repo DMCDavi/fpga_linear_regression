@@ -12,8 +12,7 @@ entity MatrixOperations is
 end MatrixOperations;
 
 architecture Behavioral of MatrixOperations is
-
-    -- Atualizando as definições dos componentes para usar arrays
+    -- Componentes para operações com matrizes
     component MatrixTranspose
         Port (
             A : in matrix_type;
@@ -36,7 +35,7 @@ architecture Behavioral of MatrixOperations is
         );
     end component;
 
-    -- Sinais intermediários
+    -- Sinais intermediários para armazenar resultados
     signal XT, XTX, Inv, XTY : matrix_type;
 
 begin
@@ -59,19 +58,18 @@ begin
         A_out => Inv
     );
 
-    -- Multiplicação X^T * Y (adaptando Y para ser uma matriz 2x2)
+    -- Multiplicação X^T * Y (considerando Y como uma matriz)
     multiply_xty: MatrixMultiplier port map(
         A => XT,
-        B => Y,  -- Transformando Y em uma matriz 2x2
+        B => Y,  -- Transformando Y em uma matriz
         C => XTY
-	);
+    );
 
     -- Multiplicação final (X^T * X)^-1 * (X^T * Y)
     final_multiply: MatrixMultiplier port map(
         A => Inv,
         B => XTY,
-        C => B  -- Apenas as primeiras linhas de C são relevantes para o vetor B
+        C => B  -- Resultado final armazenado em B
     );
-	 --B <= XTY;
 
 end Behavioral;
