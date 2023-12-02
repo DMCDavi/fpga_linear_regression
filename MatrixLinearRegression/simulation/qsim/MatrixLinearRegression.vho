@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "12/01/2023 12:56:13"
+-- DATE "12/01/2023 17:20:56"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -36,10 +36,14 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	MatrixLinearRegression IS
     PORT (
-	a : IN std_logic_vector(31 DOWNTO 0);
-	b : IN std_logic_vector(31 DOWNTO 0);
-	mult_result : OUT std_logic_vector(31 DOWNTO 0);
-	div_result : OUT std_logic_vector(31 DOWNTO 0)
+	clk : IN std_logic;
+	reset : IN std_logic;
+	init_transmission : IN std_logic;
+	rx : IN std_logic;
+	tx : OUT std_logic;
+	digit : OUT std_logic_vector(15 DOWNTO 0);
+	aa : OUT std_logic_vector(15 DOWNTO 0);
+	bb : OUT std_logic_vector(15 DOWNTO 0)
 	);
 END MatrixLinearRegression;
 
@@ -53,150 +57,83 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_a : std_logic_vector(31 DOWNTO 0);
-SIGNAL ww_b : std_logic_vector(31 DOWNTO 0);
-SIGNAL ww_mult_result : std_logic_vector(31 DOWNTO 0);
-SIGNAL ww_div_result : std_logic_vector(31 DOWNTO 0);
-SIGNAL \a[0]~input_o\ : std_logic;
-SIGNAL \a[1]~input_o\ : std_logic;
-SIGNAL \a[2]~input_o\ : std_logic;
-SIGNAL \a[3]~input_o\ : std_logic;
-SIGNAL \a[4]~input_o\ : std_logic;
-SIGNAL \a[5]~input_o\ : std_logic;
-SIGNAL \a[6]~input_o\ : std_logic;
-SIGNAL \a[7]~input_o\ : std_logic;
-SIGNAL \a[8]~input_o\ : std_logic;
-SIGNAL \a[9]~input_o\ : std_logic;
-SIGNAL \a[10]~input_o\ : std_logic;
-SIGNAL \a[11]~input_o\ : std_logic;
-SIGNAL \a[12]~input_o\ : std_logic;
-SIGNAL \a[13]~input_o\ : std_logic;
-SIGNAL \a[14]~input_o\ : std_logic;
-SIGNAL \a[15]~input_o\ : std_logic;
-SIGNAL \a[16]~input_o\ : std_logic;
-SIGNAL \a[17]~input_o\ : std_logic;
-SIGNAL \a[18]~input_o\ : std_logic;
-SIGNAL \a[19]~input_o\ : std_logic;
-SIGNAL \a[20]~input_o\ : std_logic;
-SIGNAL \a[21]~input_o\ : std_logic;
-SIGNAL \a[22]~input_o\ : std_logic;
-SIGNAL \a[23]~input_o\ : std_logic;
-SIGNAL \a[24]~input_o\ : std_logic;
-SIGNAL \a[25]~input_o\ : std_logic;
-SIGNAL \a[26]~input_o\ : std_logic;
-SIGNAL \a[27]~input_o\ : std_logic;
-SIGNAL \a[28]~input_o\ : std_logic;
-SIGNAL \a[29]~input_o\ : std_logic;
-SIGNAL \a[30]~input_o\ : std_logic;
-SIGNAL \a[31]~input_o\ : std_logic;
-SIGNAL \b[0]~input_o\ : std_logic;
-SIGNAL \b[1]~input_o\ : std_logic;
-SIGNAL \b[2]~input_o\ : std_logic;
-SIGNAL \b[3]~input_o\ : std_logic;
-SIGNAL \b[4]~input_o\ : std_logic;
-SIGNAL \b[5]~input_o\ : std_logic;
-SIGNAL \b[6]~input_o\ : std_logic;
-SIGNAL \b[7]~input_o\ : std_logic;
-SIGNAL \b[8]~input_o\ : std_logic;
-SIGNAL \b[9]~input_o\ : std_logic;
-SIGNAL \b[10]~input_o\ : std_logic;
-SIGNAL \b[11]~input_o\ : std_logic;
-SIGNAL \b[12]~input_o\ : std_logic;
-SIGNAL \b[13]~input_o\ : std_logic;
-SIGNAL \b[14]~input_o\ : std_logic;
-SIGNAL \b[15]~input_o\ : std_logic;
-SIGNAL \b[16]~input_o\ : std_logic;
-SIGNAL \b[17]~input_o\ : std_logic;
-SIGNAL \b[18]~input_o\ : std_logic;
-SIGNAL \b[19]~input_o\ : std_logic;
-SIGNAL \b[20]~input_o\ : std_logic;
-SIGNAL \b[21]~input_o\ : std_logic;
-SIGNAL \b[22]~input_o\ : std_logic;
-SIGNAL \b[23]~input_o\ : std_logic;
-SIGNAL \b[24]~input_o\ : std_logic;
-SIGNAL \b[25]~input_o\ : std_logic;
-SIGNAL \b[26]~input_o\ : std_logic;
-SIGNAL \b[27]~input_o\ : std_logic;
-SIGNAL \b[28]~input_o\ : std_logic;
-SIGNAL \b[29]~input_o\ : std_logic;
-SIGNAL \b[30]~input_o\ : std_logic;
-SIGNAL \b[31]~input_o\ : std_logic;
-SIGNAL \mult_result[0]~output_o\ : std_logic;
-SIGNAL \mult_result[1]~output_o\ : std_logic;
-SIGNAL \mult_result[2]~output_o\ : std_logic;
-SIGNAL \mult_result[3]~output_o\ : std_logic;
-SIGNAL \mult_result[4]~output_o\ : std_logic;
-SIGNAL \mult_result[5]~output_o\ : std_logic;
-SIGNAL \mult_result[6]~output_o\ : std_logic;
-SIGNAL \mult_result[7]~output_o\ : std_logic;
-SIGNAL \mult_result[8]~output_o\ : std_logic;
-SIGNAL \mult_result[9]~output_o\ : std_logic;
-SIGNAL \mult_result[10]~output_o\ : std_logic;
-SIGNAL \mult_result[11]~output_o\ : std_logic;
-SIGNAL \mult_result[12]~output_o\ : std_logic;
-SIGNAL \mult_result[13]~output_o\ : std_logic;
-SIGNAL \mult_result[14]~output_o\ : std_logic;
-SIGNAL \mult_result[15]~output_o\ : std_logic;
-SIGNAL \mult_result[16]~output_o\ : std_logic;
-SIGNAL \mult_result[17]~output_o\ : std_logic;
-SIGNAL \mult_result[18]~output_o\ : std_logic;
-SIGNAL \mult_result[19]~output_o\ : std_logic;
-SIGNAL \mult_result[20]~output_o\ : std_logic;
-SIGNAL \mult_result[21]~output_o\ : std_logic;
-SIGNAL \mult_result[22]~output_o\ : std_logic;
-SIGNAL \mult_result[23]~output_o\ : std_logic;
-SIGNAL \mult_result[24]~output_o\ : std_logic;
-SIGNAL \mult_result[25]~output_o\ : std_logic;
-SIGNAL \mult_result[26]~output_o\ : std_logic;
-SIGNAL \mult_result[27]~output_o\ : std_logic;
-SIGNAL \mult_result[28]~output_o\ : std_logic;
-SIGNAL \mult_result[29]~output_o\ : std_logic;
-SIGNAL \mult_result[30]~output_o\ : std_logic;
-SIGNAL \mult_result[31]~output_o\ : std_logic;
-SIGNAL \div_result[0]~output_o\ : std_logic;
-SIGNAL \div_result[1]~output_o\ : std_logic;
-SIGNAL \div_result[2]~output_o\ : std_logic;
-SIGNAL \div_result[3]~output_o\ : std_logic;
-SIGNAL \div_result[4]~output_o\ : std_logic;
-SIGNAL \div_result[5]~output_o\ : std_logic;
-SIGNAL \div_result[6]~output_o\ : std_logic;
-SIGNAL \div_result[7]~output_o\ : std_logic;
-SIGNAL \div_result[8]~output_o\ : std_logic;
-SIGNAL \div_result[9]~output_o\ : std_logic;
-SIGNAL \div_result[10]~output_o\ : std_logic;
-SIGNAL \div_result[11]~output_o\ : std_logic;
-SIGNAL \div_result[12]~output_o\ : std_logic;
-SIGNAL \div_result[13]~output_o\ : std_logic;
-SIGNAL \div_result[14]~output_o\ : std_logic;
-SIGNAL \div_result[15]~output_o\ : std_logic;
-SIGNAL \div_result[16]~output_o\ : std_logic;
-SIGNAL \div_result[17]~output_o\ : std_logic;
-SIGNAL \div_result[18]~output_o\ : std_logic;
-SIGNAL \div_result[19]~output_o\ : std_logic;
-SIGNAL \div_result[20]~output_o\ : std_logic;
-SIGNAL \div_result[21]~output_o\ : std_logic;
-SIGNAL \div_result[22]~output_o\ : std_logic;
-SIGNAL \div_result[23]~output_o\ : std_logic;
-SIGNAL \div_result[24]~output_o\ : std_logic;
-SIGNAL \div_result[25]~output_o\ : std_logic;
-SIGNAL \div_result[26]~output_o\ : std_logic;
-SIGNAL \div_result[27]~output_o\ : std_logic;
-SIGNAL \div_result[28]~output_o\ : std_logic;
-SIGNAL \div_result[29]~output_o\ : std_logic;
-SIGNAL \div_result[30]~output_o\ : std_logic;
-SIGNAL \div_result[31]~output_o\ : std_logic;
+SIGNAL ww_clk : std_logic;
+SIGNAL ww_reset : std_logic;
+SIGNAL ww_init_transmission : std_logic;
+SIGNAL ww_rx : std_logic;
+SIGNAL ww_tx : std_logic;
+SIGNAL ww_digit : std_logic_vector(15 DOWNTO 0);
+SIGNAL ww_aa : std_logic_vector(15 DOWNTO 0);
+SIGNAL ww_bb : std_logic_vector(15 DOWNTO 0);
+SIGNAL \clk~input_o\ : std_logic;
+SIGNAL \reset~input_o\ : std_logic;
+SIGNAL \init_transmission~input_o\ : std_logic;
+SIGNAL \rx~input_o\ : std_logic;
+SIGNAL \tx~output_o\ : std_logic;
+SIGNAL \digit[0]~output_o\ : std_logic;
+SIGNAL \digit[1]~output_o\ : std_logic;
+SIGNAL \digit[2]~output_o\ : std_logic;
+SIGNAL \digit[3]~output_o\ : std_logic;
+SIGNAL \digit[4]~output_o\ : std_logic;
+SIGNAL \digit[5]~output_o\ : std_logic;
+SIGNAL \digit[6]~output_o\ : std_logic;
+SIGNAL \digit[7]~output_o\ : std_logic;
+SIGNAL \digit[8]~output_o\ : std_logic;
+SIGNAL \digit[9]~output_o\ : std_logic;
+SIGNAL \digit[10]~output_o\ : std_logic;
+SIGNAL \digit[11]~output_o\ : std_logic;
+SIGNAL \digit[12]~output_o\ : std_logic;
+SIGNAL \digit[13]~output_o\ : std_logic;
+SIGNAL \digit[14]~output_o\ : std_logic;
+SIGNAL \digit[15]~output_o\ : std_logic;
+SIGNAL \aa[0]~output_o\ : std_logic;
+SIGNAL \aa[1]~output_o\ : std_logic;
+SIGNAL \aa[2]~output_o\ : std_logic;
+SIGNAL \aa[3]~output_o\ : std_logic;
+SIGNAL \aa[4]~output_o\ : std_logic;
+SIGNAL \aa[5]~output_o\ : std_logic;
+SIGNAL \aa[6]~output_o\ : std_logic;
+SIGNAL \aa[7]~output_o\ : std_logic;
+SIGNAL \aa[8]~output_o\ : std_logic;
+SIGNAL \aa[9]~output_o\ : std_logic;
+SIGNAL \aa[10]~output_o\ : std_logic;
+SIGNAL \aa[11]~output_o\ : std_logic;
+SIGNAL \aa[12]~output_o\ : std_logic;
+SIGNAL \aa[13]~output_o\ : std_logic;
+SIGNAL \aa[14]~output_o\ : std_logic;
+SIGNAL \aa[15]~output_o\ : std_logic;
+SIGNAL \bb[0]~output_o\ : std_logic;
+SIGNAL \bb[1]~output_o\ : std_logic;
+SIGNAL \bb[2]~output_o\ : std_logic;
+SIGNAL \bb[3]~output_o\ : std_logic;
+SIGNAL \bb[4]~output_o\ : std_logic;
+SIGNAL \bb[5]~output_o\ : std_logic;
+SIGNAL \bb[6]~output_o\ : std_logic;
+SIGNAL \bb[7]~output_o\ : std_logic;
+SIGNAL \bb[8]~output_o\ : std_logic;
+SIGNAL \bb[9]~output_o\ : std_logic;
+SIGNAL \bb[10]~output_o\ : std_logic;
+SIGNAL \bb[11]~output_o\ : std_logic;
+SIGNAL \bb[12]~output_o\ : std_logic;
+SIGNAL \bb[13]~output_o\ : std_logic;
+SIGNAL \bb[14]~output_o\ : std_logic;
+SIGNAL \bb[15]~output_o\ : std_logic;
 
 BEGIN
 
-ww_a <= a;
-ww_b <= b;
-mult_result <= ww_mult_result;
-div_result <= ww_div_result;
+ww_clk <= clk;
+ww_reset <= reset;
+ww_init_transmission <= init_transmission;
+ww_rx <= rx;
+tx <= ww_tx;
+digit <= ww_digit;
+aa <= ww_aa;
+bb <= ww_bb;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\mult_result[0]~output\ : cyclonev_io_obuf
+\tx~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -206,9 +143,21 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[0]~output_o\);
+	o => \tx~output_o\);
 
-\mult_result[1]~output\ : cyclonev_io_obuf
+\digit[0]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[0]~output_o\);
+
+\digit[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -218,9 +167,21 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[1]~output_o\);
+	o => \digit[1]~output_o\);
 
-\mult_result[2]~output\ : cyclonev_io_obuf
+\digit[2]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[2]~output_o\);
+
+\digit[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -230,9 +191,141 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[2]~output_o\);
+	o => \digit[3]~output_o\);
 
-\mult_result[3]~output\ : cyclonev_io_obuf
+\digit[4]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[4]~output_o\);
+
+\digit[5]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[5]~output_o\);
+
+\digit[6]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[6]~output_o\);
+
+\digit[7]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[7]~output_o\);
+
+\digit[8]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[8]~output_o\);
+
+\digit[9]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[9]~output_o\);
+
+\digit[10]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[10]~output_o\);
+
+\digit[11]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[11]~output_o\);
+
+\digit[12]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[12]~output_o\);
+
+\digit[13]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[13]~output_o\);
+
+\digit[14]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \digit[14]~output_o\);
+
+\digit[15]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -242,21 +335,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[3]~output_o\);
+	o => \digit[15]~output_o\);
 
-\mult_result[4]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[4]~output_o\);
-
-\mult_result[5]~output\ : cyclonev_io_obuf
+\aa[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -266,9 +347,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[5]~output_o\);
+	o => \aa[0]~output_o\);
 
-\mult_result[6]~output\ : cyclonev_io_obuf
+\aa[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -278,9 +359,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[6]~output_o\);
+	o => \aa[1]~output_o\);
 
-\mult_result[7]~output\ : cyclonev_io_obuf
+\aa[2]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -290,21 +371,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[7]~output_o\);
+	o => \aa[2]~output_o\);
 
-\mult_result[8]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[8]~output_o\);
-
-\mult_result[9]~output\ : cyclonev_io_obuf
+\aa[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -314,45 +383,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[9]~output_o\);
+	o => \aa[3]~output_o\);
 
-\mult_result[10]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[10]~output_o\);
-
-\mult_result[11]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[11]~output_o\);
-
-\mult_result[12]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[12]~output_o\);
-
-\mult_result[13]~output\ : cyclonev_io_obuf
+\aa[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -362,9 +395,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \mult_result[13]~output_o\);
+	o => \aa[4]~output_o\);
 
-\mult_result[14]~output\ : cyclonev_io_obuf
+\aa[5]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -374,9 +407,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[14]~output_o\);
+	o => \aa[5]~output_o\);
 
-\mult_result[15]~output\ : cyclonev_io_obuf
+\aa[6]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -386,9 +419,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[15]~output_o\);
+	o => \aa[6]~output_o\);
 
-\mult_result[16]~output\ : cyclonev_io_obuf
+\aa[7]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -398,9 +431,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[16]~output_o\);
+	o => \aa[7]~output_o\);
 
-\mult_result[17]~output\ : cyclonev_io_obuf
+\aa[8]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -410,9 +443,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[17]~output_o\);
+	o => \aa[8]~output_o\);
 
-\mult_result[18]~output\ : cyclonev_io_obuf
+\aa[9]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -422,9 +455,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[18]~output_o\);
+	o => \aa[9]~output_o\);
 
-\mult_result[19]~output\ : cyclonev_io_obuf
+\aa[10]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -434,9 +467,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[19]~output_o\);
+	o => \aa[10]~output_o\);
 
-\mult_result[20]~output\ : cyclonev_io_obuf
+\aa[11]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -446,9 +479,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[20]~output_o\);
+	o => \aa[11]~output_o\);
 
-\mult_result[21]~output\ : cyclonev_io_obuf
+\aa[12]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -458,9 +491,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[21]~output_o\);
+	o => \aa[12]~output_o\);
 
-\mult_result[22]~output\ : cyclonev_io_obuf
+\aa[13]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -470,9 +503,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[22]~output_o\);
+	o => \aa[13]~output_o\);
 
-\mult_result[23]~output\ : cyclonev_io_obuf
+\aa[14]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -482,9 +515,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[23]~output_o\);
+	o => \aa[14]~output_o\);
 
-\mult_result[24]~output\ : cyclonev_io_obuf
+\aa[15]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -494,105 +527,9 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \mult_result[24]~output_o\);
+	o => \aa[15]~output_o\);
 
-\mult_result[25]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[25]~output_o\);
-
-\mult_result[26]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[26]~output_o\);
-
-\mult_result[27]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[27]~output_o\);
-
-\mult_result[28]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[28]~output_o\);
-
-\mult_result[29]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[29]~output_o\);
-
-\mult_result[30]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[30]~output_o\);
-
-\mult_result[31]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \mult_result[31]~output_o\);
-
-\div_result[0]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[0]~output_o\);
-
-\div_result[1]~output\ : cyclonev_io_obuf
+\bb[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -602,9 +539,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \div_result[1]~output_o\);
+	o => \bb[0]~output_o\);
 
-\div_result[2]~output\ : cyclonev_io_obuf
+\bb[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -614,9 +551,33 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \div_result[2]~output_o\);
+	o => \bb[1]~output_o\);
 
-\div_result[3]~output\ : cyclonev_io_obuf
+\bb[2]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \bb[2]~output_o\);
+
+\bb[3]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \bb[3]~output_o\);
+
+\bb[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -626,33 +587,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \div_result[3]~output_o\);
+	o => \bb[4]~output_o\);
 
-\div_result[4]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[4]~output_o\);
-
-\div_result[5]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[5]~output_o\);
-
-\div_result[6]~output\ : cyclonev_io_obuf
+\bb[5]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -662,9 +599,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \div_result[6]~output_o\);
+	o => \bb[5]~output_o\);
 
-\div_result[7]~output\ : cyclonev_io_obuf
+\bb[6]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -674,21 +611,9 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \div_result[7]~output_o\);
+	o => \bb[6]~output_o\);
 
-\div_result[8]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[8]~output_o\);
-
-\div_result[9]~output\ : cyclonev_io_obuf
+\bb[7]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -698,9 +623,93 @@ GENERIC MAP (
 PORT MAP (
 	i => VCC,
 	devoe => ww_devoe,
-	o => \div_result[9]~output_o\);
+	o => \bb[7]~output_o\);
 
-\div_result[10]~output\ : cyclonev_io_obuf
+\bb[8]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[8]~output_o\);
+
+\bb[9]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[9]~output_o\);
+
+\bb[10]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[10]~output_o\);
+
+\bb[11]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[11]~output_o\);
+
+\bb[12]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[12]~output_o\);
+
+\bb[13]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[13]~output_o\);
+
+\bb[14]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => \bb[14]~output_o\);
+
+\bb[15]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -710,1027 +719,145 @@ GENERIC MAP (
 PORT MAP (
 	i => GND,
 	devoe => ww_devoe,
-	o => \div_result[10]~output_o\);
+	o => \bb[15]~output_o\);
 
-\div_result[11]~output\ : cyclonev_io_obuf
+\clk~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[11]~output_o\);
-
-\div_result[12]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[12]~output_o\);
-
-\div_result[13]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[13]~output_o\);
-
-\div_result[14]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[14]~output_o\);
-
-\div_result[15]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[15]~output_o\);
-
-\div_result[16]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[16]~output_o\);
-
-\div_result[17]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[17]~output_o\);
-
-\div_result[18]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[18]~output_o\);
-
-\div_result[19]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[19]~output_o\);
-
-\div_result[20]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[20]~output_o\);
-
-\div_result[21]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[21]~output_o\);
-
-\div_result[22]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[22]~output_o\);
-
-\div_result[23]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[23]~output_o\);
-
-\div_result[24]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[24]~output_o\);
-
-\div_result[25]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[25]~output_o\);
-
-\div_result[26]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[26]~output_o\);
-
-\div_result[27]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[27]~output_o\);
-
-\div_result[28]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[28]~output_o\);
-
-\div_result[29]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[29]~output_o\);
-
-\div_result[30]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[30]~output_o\);
-
-\div_result[31]~output\ : cyclonev_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false",
-	shift_series_termination_control => "false")
--- pragma translate_on
-PORT MAP (
-	i => GND,
-	devoe => ww_devoe,
-	o => \div_result[31]~output_o\);
-
-\a[0]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(0),
-	o => \a[0]~input_o\);
-
-\a[1]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(1),
-	o => \a[1]~input_o\);
-
-\a[2]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(2),
-	o => \a[2]~input_o\);
-
-\a[3]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(3),
-	o => \a[3]~input_o\);
-
-\a[4]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(4),
-	o => \a[4]~input_o\);
-
-\a[5]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(5),
-	o => \a[5]~input_o\);
-
-\a[6]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(6),
-	o => \a[6]~input_o\);
-
-\a[7]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(7),
-	o => \a[7]~input_o\);
-
-\a[8]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(8),
-	o => \a[8]~input_o\);
-
-\a[9]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(9),
-	o => \a[9]~input_o\);
-
-\a[10]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(10),
-	o => \a[10]~input_o\);
-
-\a[11]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(11),
-	o => \a[11]~input_o\);
-
-\a[12]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(12),
-	o => \a[12]~input_o\);
-
-\a[13]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(13),
-	o => \a[13]~input_o\);
-
-\a[14]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(14),
-	o => \a[14]~input_o\);
-
-\a[15]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(15),
-	o => \a[15]~input_o\);
-
-\a[16]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(16),
-	o => \a[16]~input_o\);
-
-\a[17]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(17),
-	o => \a[17]~input_o\);
-
-\a[18]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(18),
-	o => \a[18]~input_o\);
-
-\a[19]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(19),
-	o => \a[19]~input_o\);
-
-\a[20]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(20),
-	o => \a[20]~input_o\);
-
-\a[21]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(21),
-	o => \a[21]~input_o\);
-
-\a[22]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(22),
-	o => \a[22]~input_o\);
-
-\a[23]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(23),
-	o => \a[23]~input_o\);
-
-\a[24]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(24),
-	o => \a[24]~input_o\);
-
-\a[25]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(25),
-	o => \a[25]~input_o\);
-
-\a[26]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(26),
-	o => \a[26]~input_o\);
-
-\a[27]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(27),
-	o => \a[27]~input_o\);
-
-\a[28]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(28),
-	o => \a[28]~input_o\);
-
-\a[29]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(29),
-	o => \a[29]~input_o\);
-
-\a[30]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(30),
-	o => \a[30]~input_o\);
-
-\a[31]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(31),
-	o => \a[31]~input_o\);
-
-\b[0]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(0),
-	o => \b[0]~input_o\);
-
-\b[1]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(1),
-	o => \b[1]~input_o\);
-
-\b[2]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(2),
-	o => \b[2]~input_o\);
-
-\b[3]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(3),
-	o => \b[3]~input_o\);
-
-\b[4]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(4),
-	o => \b[4]~input_o\);
-
-\b[5]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(5),
-	o => \b[5]~input_o\);
-
-\b[6]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(6),
-	o => \b[6]~input_o\);
-
-\b[7]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(7),
-	o => \b[7]~input_o\);
-
-\b[8]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(8),
-	o => \b[8]~input_o\);
-
-\b[9]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(9),
-	o => \b[9]~input_o\);
-
-\b[10]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(10),
-	o => \b[10]~input_o\);
-
-\b[11]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(11),
-	o => \b[11]~input_o\);
-
-\b[12]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(12),
-	o => \b[12]~input_o\);
-
-\b[13]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(13),
-	o => \b[13]~input_o\);
-
-\b[14]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(14),
-	o => \b[14]~input_o\);
-
-\b[15]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(15),
-	o => \b[15]~input_o\);
-
-\b[16]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(16),
-	o => \b[16]~input_o\);
-
-\b[17]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(17),
-	o => \b[17]~input_o\);
-
-\b[18]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(18),
-	o => \b[18]~input_o\);
-
-\b[19]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(19),
-	o => \b[19]~input_o\);
-
-\b[20]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(20),
-	o => \b[20]~input_o\);
-
-\b[21]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(21),
-	o => \b[21]~input_o\);
-
-\b[22]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(22),
-	o => \b[22]~input_o\);
-
-\b[23]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(23),
-	o => \b[23]~input_o\);
-
-\b[24]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(24),
-	o => \b[24]~input_o\);
-
-\b[25]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(25),
-	o => \b[25]~input_o\);
-
-\b[26]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(26),
-	o => \b[26]~input_o\);
-
-\b[27]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_b(27),
-	o => \b[27]~input_o\);
-
-\b[28]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_b(28),
-	o => \b[28]~input_o\);
+	i => ww_clk,
+	o => \clk~input_o\);
 
-\b[29]~input\ : cyclonev_io_ibuf
+\reset~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_b(29),
-	o => \b[29]~input_o\);
+	i => ww_reset,
+	o => \reset~input_o\);
 
-\b[30]~input\ : cyclonev_io_ibuf
+\init_transmission~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_b(30),
-	o => \b[30]~input_o\);
+	i => ww_init_transmission,
+	o => \init_transmission~input_o\);
 
-\b[31]~input\ : cyclonev_io_ibuf
+\rx~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_b(31),
-	o => \b[31]~input_o\);
-
-ww_mult_result(0) <= \mult_result[0]~output_o\;
-
-ww_mult_result(1) <= \mult_result[1]~output_o\;
-
-ww_mult_result(2) <= \mult_result[2]~output_o\;
-
-ww_mult_result(3) <= \mult_result[3]~output_o\;
-
-ww_mult_result(4) <= \mult_result[4]~output_o\;
-
-ww_mult_result(5) <= \mult_result[5]~output_o\;
-
-ww_mult_result(6) <= \mult_result[6]~output_o\;
-
-ww_mult_result(7) <= \mult_result[7]~output_o\;
-
-ww_mult_result(8) <= \mult_result[8]~output_o\;
-
-ww_mult_result(9) <= \mult_result[9]~output_o\;
-
-ww_mult_result(10) <= \mult_result[10]~output_o\;
-
-ww_mult_result(11) <= \mult_result[11]~output_o\;
-
-ww_mult_result(12) <= \mult_result[12]~output_o\;
-
-ww_mult_result(13) <= \mult_result[13]~output_o\;
-
-ww_mult_result(14) <= \mult_result[14]~output_o\;
+	i => ww_rx,
+	o => \rx~input_o\);
 
-ww_mult_result(15) <= \mult_result[15]~output_o\;
+ww_tx <= \tx~output_o\;
 
-ww_mult_result(16) <= \mult_result[16]~output_o\;
+ww_digit(0) <= \digit[0]~output_o\;
 
-ww_mult_result(17) <= \mult_result[17]~output_o\;
+ww_digit(1) <= \digit[1]~output_o\;
 
-ww_mult_result(18) <= \mult_result[18]~output_o\;
+ww_digit(2) <= \digit[2]~output_o\;
 
-ww_mult_result(19) <= \mult_result[19]~output_o\;
+ww_digit(3) <= \digit[3]~output_o\;
 
-ww_mult_result(20) <= \mult_result[20]~output_o\;
+ww_digit(4) <= \digit[4]~output_o\;
 
-ww_mult_result(21) <= \mult_result[21]~output_o\;
+ww_digit(5) <= \digit[5]~output_o\;
 
-ww_mult_result(22) <= \mult_result[22]~output_o\;
+ww_digit(6) <= \digit[6]~output_o\;
 
-ww_mult_result(23) <= \mult_result[23]~output_o\;
+ww_digit(7) <= \digit[7]~output_o\;
 
-ww_mult_result(24) <= \mult_result[24]~output_o\;
+ww_digit(8) <= \digit[8]~output_o\;
 
-ww_mult_result(25) <= \mult_result[25]~output_o\;
+ww_digit(9) <= \digit[9]~output_o\;
 
-ww_mult_result(26) <= \mult_result[26]~output_o\;
+ww_digit(10) <= \digit[10]~output_o\;
 
-ww_mult_result(27) <= \mult_result[27]~output_o\;
+ww_digit(11) <= \digit[11]~output_o\;
 
-ww_mult_result(28) <= \mult_result[28]~output_o\;
+ww_digit(12) <= \digit[12]~output_o\;
 
-ww_mult_result(29) <= \mult_result[29]~output_o\;
+ww_digit(13) <= \digit[13]~output_o\;
 
-ww_mult_result(30) <= \mult_result[30]~output_o\;
+ww_digit(14) <= \digit[14]~output_o\;
 
-ww_mult_result(31) <= \mult_result[31]~output_o\;
+ww_digit(15) <= \digit[15]~output_o\;
 
-ww_div_result(0) <= \div_result[0]~output_o\;
+ww_aa(0) <= \aa[0]~output_o\;
 
-ww_div_result(1) <= \div_result[1]~output_o\;
+ww_aa(1) <= \aa[1]~output_o\;
 
-ww_div_result(2) <= \div_result[2]~output_o\;
+ww_aa(2) <= \aa[2]~output_o\;
 
-ww_div_result(3) <= \div_result[3]~output_o\;
+ww_aa(3) <= \aa[3]~output_o\;
 
-ww_div_result(4) <= \div_result[4]~output_o\;
+ww_aa(4) <= \aa[4]~output_o\;
 
-ww_div_result(5) <= \div_result[5]~output_o\;
+ww_aa(5) <= \aa[5]~output_o\;
 
-ww_div_result(6) <= \div_result[6]~output_o\;
+ww_aa(6) <= \aa[6]~output_o\;
 
-ww_div_result(7) <= \div_result[7]~output_o\;
+ww_aa(7) <= \aa[7]~output_o\;
 
-ww_div_result(8) <= \div_result[8]~output_o\;
+ww_aa(8) <= \aa[8]~output_o\;
 
-ww_div_result(9) <= \div_result[9]~output_o\;
+ww_aa(9) <= \aa[9]~output_o\;
 
-ww_div_result(10) <= \div_result[10]~output_o\;
+ww_aa(10) <= \aa[10]~output_o\;
 
-ww_div_result(11) <= \div_result[11]~output_o\;
+ww_aa(11) <= \aa[11]~output_o\;
 
-ww_div_result(12) <= \div_result[12]~output_o\;
+ww_aa(12) <= \aa[12]~output_o\;
 
-ww_div_result(13) <= \div_result[13]~output_o\;
+ww_aa(13) <= \aa[13]~output_o\;
 
-ww_div_result(14) <= \div_result[14]~output_o\;
+ww_aa(14) <= \aa[14]~output_o\;
 
-ww_div_result(15) <= \div_result[15]~output_o\;
+ww_aa(15) <= \aa[15]~output_o\;
 
-ww_div_result(16) <= \div_result[16]~output_o\;
+ww_bb(0) <= \bb[0]~output_o\;
 
-ww_div_result(17) <= \div_result[17]~output_o\;
+ww_bb(1) <= \bb[1]~output_o\;
 
-ww_div_result(18) <= \div_result[18]~output_o\;
+ww_bb(2) <= \bb[2]~output_o\;
 
-ww_div_result(19) <= \div_result[19]~output_o\;
+ww_bb(3) <= \bb[3]~output_o\;
 
-ww_div_result(20) <= \div_result[20]~output_o\;
+ww_bb(4) <= \bb[4]~output_o\;
 
-ww_div_result(21) <= \div_result[21]~output_o\;
+ww_bb(5) <= \bb[5]~output_o\;
 
-ww_div_result(22) <= \div_result[22]~output_o\;
+ww_bb(6) <= \bb[6]~output_o\;
 
-ww_div_result(23) <= \div_result[23]~output_o\;
+ww_bb(7) <= \bb[7]~output_o\;
 
-ww_div_result(24) <= \div_result[24]~output_o\;
+ww_bb(8) <= \bb[8]~output_o\;
 
-ww_div_result(25) <= \div_result[25]~output_o\;
+ww_bb(9) <= \bb[9]~output_o\;
 
-ww_div_result(26) <= \div_result[26]~output_o\;
+ww_bb(10) <= \bb[10]~output_o\;
 
-ww_div_result(27) <= \div_result[27]~output_o\;
+ww_bb(11) <= \bb[11]~output_o\;
 
-ww_div_result(28) <= \div_result[28]~output_o\;
+ww_bb(12) <= \bb[12]~output_o\;
 
-ww_div_result(29) <= \div_result[29]~output_o\;
+ww_bb(13) <= \bb[13]~output_o\;
 
-ww_div_result(30) <= \div_result[30]~output_o\;
+ww_bb(14) <= \bb[14]~output_o\;
 
-ww_div_result(31) <= \div_result[31]~output_o\;
+ww_bb(15) <= \bb[15]~output_o\;
 END structure;
 
 

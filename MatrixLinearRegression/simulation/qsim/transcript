@@ -1,7 +1,7 @@
 # do MatrixLinearRegression.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:56:13 on Dec 01,2023
+# Start time: 17:20:57 on Dec 01,2023
 # vcom -work work MatrixLinearRegression.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,20 +13,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity MatrixLinearRegression
 # -- Compiling architecture structure of MatrixLinearRegression
-# End time: 12:56:13 on Dec 01,2023, Elapsed time: 0:00:00
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:56:13 on Dec 01,2023
-# vcom -work work Waveform3.vwf.vht 
+# Start time: 17:20:57 on Dec 01,2023
+# vcom -work work Waveform5.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MatrixLinearRegression_vhd_vec_tst
 # -- Compiling architecture MatrixLinearRegression_arch of MatrixLinearRegression_vhd_vec_tst
-# End time: 12:56:13 on Dec 01,2023, Elapsed time: 0:00:00
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MatrixLinearRegression_vhd_vec_tst 
-# Start time: 12:56:14 on Dec 01,2023
+# Start time: 17:20:57 on Dec 01,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -40,8 +40,6 @@
 # Loading ieee.std_logic_arith(body)
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
-# ** Warning: Design size of 10630 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
 # after#32
-# End time: 12:56:14 on Dec 01,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
