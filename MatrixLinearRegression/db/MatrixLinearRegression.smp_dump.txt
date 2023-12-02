@@ -1,0 +1,6 @@
+
+State Machine - |MatrixLinearRegression|SerialUartCommunication:uart_comm|rx_state
+Name rx_state.ready_st rx_state.receive rx_state.idle 
+rx_state.idle 0 0 0 
+rx_state.receive 0 1 1 
+rx_state.ready_st 1 0 1 

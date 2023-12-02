@@ -1,7 +1,7 @@
 # do MatrixLinearRegression.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:06:22 on Nov 25,2023
+# Start time: 17:20:57 on Dec 01,2023
 # vcom -work work MatrixLinearRegression.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,20 +13,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity MatrixLinearRegression
 # -- Compiling architecture structure of MatrixLinearRegression
-# End time: 17:06:24 on Nov 25,2023, Elapsed time: 0:00:02
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:06:24 on Nov 25,2023
-# vcom -work work Waveform.vwf.vht 
+# Start time: 17:20:57 on Dec 01,2023
+# vcom -work work Waveform5.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MatrixLinearRegression_vhd_vec_tst
 # -- Compiling architecture MatrixLinearRegression_arch of MatrixLinearRegression_vhd_vec_tst
-# End time: 17:06:24 on Nov 25,2023, Elapsed time: 0:00:00
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MatrixLinearRegression_vhd_vec_tst 
-# Start time: 17:06:24 on Nov 25,2023
+# Start time: 17:20:57 on Dec 01,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -40,82 +40,6 @@
 # Loading ieee.std_logic_arith(body)
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
-# Loading cyclonev.cyclonev_mac(behavior)
-# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult2~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult2~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult3~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult3~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult1~477\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult1~477\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult6~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult6~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult7~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult7~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xtx|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult0~349\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\invert_xtx|Mult0~349\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult0~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\multiply_xty|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult1~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult4~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /matrixlinearregression_vhd_vec_tst/i1/\final_multiply|Mult5~8\/inst/<protected> File: nofile
-# ** Warning: Design size of 1065967 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#34
-# End time: 17:06:29 on Nov 25,2023, Elapsed time: 0:00:05
-# Errors: 0, Warnings: 37
+# after#32
+# End time: 17:20:57 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

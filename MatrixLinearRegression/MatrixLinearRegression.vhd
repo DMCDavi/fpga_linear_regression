@@ -1,106 +1,188 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.MatrixPackage.all;
+use work.FixedPointOperations.all;
 
+-- Entidade para realizar operações de regressão linear com matrizes
 entity MatrixLinearRegression is
-    Port (
-        -- Matriz X e vetor Y
-        x11 : in STD_LOGIC_VECTOR(15 downto 0);
-        x12 : in STD_LOGIC_VECTOR(15 downto 0);
-        x21 : in STD_LOGIC_VECTOR(15 downto 0);
-        x22 : in STD_LOGIC_VECTOR(15 downto 0);
-        y1 : in STD_LOGIC_VECTOR(15 downto 0);
-        y2 : in STD_LOGIC_VECTOR(15 downto 0);
-
-        -- Resultado vetor B
-        b1 : out STD_LOGIC_VECTOR(15 downto 0);
-        b2 : out STD_LOGIC_VECTOR(15 downto 0)
-    );
+    PORT(
+        clk               : IN  STD_LOGIC;  -- clock do sistema
+        reset             : IN  STD_LOGIC;  -- reset assíncrono
+        init_transmission : IN  STD_LOGIC;
+        rx                : IN  STD_LOGIC;  -- pino de recepção
+        tx                : OUT STD_LOGIC;  -- pino de transmissão
+        digit             : OUT STD_LOGIC_VECTOR(7 downto 0)
+    );	
 end MatrixLinearRegression;
 
 architecture Behavioral of MatrixLinearRegression is
-
-    component MatrixTranspose
+    -- Componente para comunicação serial UART
+    component SerialUartCommunication
         Port (
-            a11 : in STD_LOGIC_VECTOR(15 downto 0);
-            a12 : in STD_LOGIC_VECTOR(15 downto 0);
-            a21 : in STD_LOGIC_VECTOR(15 downto 0);
-            a22 : in STD_LOGIC_VECTOR(15 downto 0);
-            b11 : out STD_LOGIC_VECTOR(15 downto 0);
-            b12 : out STD_LOGIC_VECTOR(15 downto 0);
-            b21 : out STD_LOGIC_VECTOR(15 downto 0);
-            b22 : out STD_LOGIC_VECTOR(15 downto 0)
+            clk         : IN  STD_LOGIC;  -- clock do sistema
+            reset_n     : IN  STD_LOGIC;  -- reset assíncrono
+            tx_ena      : IN  STD_LOGIC;  -- iniciar transmissão
+            tx_data     : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);  -- dados para transmitir
+            rx          : IN  STD_LOGIC;  -- pino de recepção
+            rx_busy, rx_ready, os_pulse_out : OUT STD_LOGIC;  -- status da recepção
+            rx_error    : OUT STD_LOGIC;  -- erro de recepção detectado
+            rx_data     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);  -- dados recebidos
+            tx_busy     : OUT STD_LOGIC;  -- transmissão em progresso
+            tx_done     : OUT STD_LOGIC;
+            tx          : OUT STD_LOGIC
         );
     end component;
 
-    component MatrixMultiplier
+    -- Componente para operações de matriz
+    component MatrixOperations
         Port (
-            a11 : in STD_LOGIC_VECTOR(15 downto 0);
-            a12 : in STD_LOGIC_VECTOR(15 downto 0);
-            a21 : in STD_LOGIC_VECTOR(15 downto 0);
-            a22 : in STD_LOGIC_VECTOR(15 downto 0);
-            b11 : in STD_LOGIC_VECTOR(15 downto 0);
-            b12 : in STD_LOGIC_VECTOR(15 downto 0);
-            b21 : in STD_LOGIC_VECTOR(15 downto 0);
-            b22 : in STD_LOGIC_VECTOR(15 downto 0);
-            c11 : out STD_LOGIC_VECTOR(15 downto 0);
-            c12 : out STD_LOGIC_VECTOR(15 downto 0);
-            c21 : out STD_LOGIC_VECTOR(15 downto 0);
-            c22 : out STD_LOGIC_VECTOR(15 downto 0)
+            X : in  matrix_type;   -- Matriz X
+            Y : in  matrix_type;   -- Vetor Y
+            B : out matrix_type    -- Resultado vetor B
         );
     end component;
 
-    component MatrixInverter
-        Port (
-            a_in : in STD_LOGIC_VECTOR(15 downto 0);
-            b_in : in STD_LOGIC_VECTOR(15 downto 0);
-            c_in : in STD_LOGIC_VECTOR(15 downto 0);
-            d_in : in STD_LOGIC_VECTOR(15 downto 0);
-            a_out : out STD_LOGIC_VECTOR(15 downto 0);
-            b_out : out STD_LOGIC_VECTOR(15 downto 0);
-            c_out : out STD_LOGIC_VECTOR(15 downto 0);
-            d_out : out STD_LOGIC_VECTOR(15 downto 0)
+    -- Componente para divisão de frequência
+    component FrequencyDivider is
+        port (
+            clk     : IN  STD_LOGIC;
+            div_out : OUT STD_LOGIC
         );
     end component;
 
-    -- Sinais intermediários
-    signal xt11, xt12, xt21, xt22 : STD_LOGIC_VECTOR(15 downto 0);
-    signal xtx11, xtx12, xtx21, xtx22 : STD_LOGIC_VECTOR(15 downto 0);
-    signal inv11, inv12, inv21, inv22 : STD_LOGIC_VECTOR(15 downto 0);
-    signal xty1, xty2 : STD_LOGIC_VECTOR(15 downto 0);
+    -- Sinais usados no design
+    signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
+    signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
+    signal tx_busy, rx_ready, tx_ena, new_clk, tx_done : STD_LOGIC;
 
+    -- Sinais para as matrizes X, Y e B
+    signal X, Xr, Y, Yr, B : matrix_type;
 begin
-    -- Transposição da matriz X
-    transpose_x: MatrixTranspose port map(
-        a11 => x11, a12 => x12, a21 => x21, a22 => x22,
-        b11 => xt11, b12 => xt12, b21 => xt21, b22 => xt22
+
+    -- Instância do divisor de frequência
+    freq: FrequencyDivider port map(
+        clk => clk,
+        div_out => new_clk
     );
 
-    -- Multiplicação X^T * X
-    multiply_xtx: MatrixMultiplier port map(
-        a11 => xt11, a12 => xt12, a21 => xt21, a22 => xt22,
-        b11 => x11, b12 => x12, b21 => x21, b22 => x22,
-        c11 => xtx11, c12 => xtx12, c21 => xtx21, c22 => xtx22
+    -- Instância do componente de comunicação UART
+    uart_comm: SerialUartCommunication port map(
+        clk => clk,
+        reset_n => reset,
+        rx => rx,
+        tx => tx,
+        rx_data => rx_data,
+        tx_data => tx_data,
+        rx_ready => rx_ready,
+        tx_busy => tx_busy,
+        tx_done => tx_done,
+        tx_ena => tx_ena
     );
 
-    -- Inversão de X^T * X
-    invert_xtx: MatrixInverter port map(
-        a_in => xtx11, b_in => xtx12, c_in => xtx21, d_in => xtx22,
-        a_out => inv11, b_out => inv12, c_out => inv21, d_out => inv22
+    -- Processo para tratamento de dados recebidos
+    receive_data: process(rx_ready, reset)
+        variable i, j, z, index: integer := 1;
+    begin
+        if reset = '0' then
+            -- Inicializa as matrizes e variáveis
+            Yr <= (others => (others => (others => '0')));
+            Xr <= (others => (others => (others => '0')));
+            i := 1; j := 1; z := 1; index := 1;
+        else
+            if rx_ready'EVENT AND rx_ready = '1' then
+                -- Armazena os dados recebidos nas matrizes Xr e Yr
+                if index mod (COLUMNS_LENGTH + 1) = 0 then
+                    Yr(z,1) <= std_logic_vector(resize(signed(rx_data), NUMBER_BITS_WIDTH));
+                    z := z + 1;
+                    if z > LINES_LENGTH then
+                        z := 1;
+                    end if;
+                else
+                    Xr(i,j) <= std_logic_vector(resize(signed(rx_data), NUMBER_BITS_WIDTH));
+                    j := j + 1;
+                    if j > COLUMNS_LENGTH then
+                        j := 1;
+                        i := i + 1;
+                    end if;
+
+                    if i > LINES_LENGTH then
+                        i := 1;
+                        j := 1;
+                    end if;
+                end if;
+                index := index + 1;
+            end if;
+        end if;
+    end process receive_data;
+
+    -- Processo para conversão de dados para o formato de ponto fixo
+    covertion_to_fixed: process(Xr, Yr, reset)
+    begin
+        if reset = '0' then
+            -- Inicializa as matrizes X e Y
+            Y <= (others => (others => (others => '0')));
+            X <= (others => (others => (others => '0')));
+        else
+            -- Converte e armazena os dados em ponto fixo
+            for i in 1 to LINES_LENGTH loop
+                for j in 1 to COLUMNS_LENGTH loop
+                    X(i,j) <= to_fixed_point_std(Xr(i,j));
+                    if j = 1 then
+                        Y(i,j) <= to_fixed_point_std(Yr(i,j));
+                    else
+                        Y(i,j) <= (others => '0');
+                    end if;
+                end loop;
+            end loop;
+        end if;
+    end process covertion_to_fixed;
+
+    -- Instância do componente de operações de matriz
+    mo: MatrixOperations port map(
+        X => X,
+        Y => Y,
+        B => B
     );
 
-    -- Multiplicação X^T * Y
-    multiply_xty: MatrixMultiplier port map(
-        a11 => xt11, a12 => xt12, a21 => xt21, a22 => xt22,
-        b11 => y1, b12 => (others => '0'), b21 => y2, b22 => (others => '0'),
-        c11 => xty1, c12 => open, c21 => xty2, c22 => open
-    );
+    -- Processo para gerar saída digital baseada no resultado B
+    output_debug: process(new_clk)
+        variable i, j: integer := 1;
+    begin
+        if rising_edge(new_clk) then
+            digit <= B(i,j)(15 downto 8);
+            j := j + 1;
+            if j > COLUMNS_LENGTH then
+                j := 1;
+                i := i + 1;
+            end if;
 
-    -- Multiplicação final (X^T * X)^-1 * (X^T * Y)
-    final_multiply: MatrixMultiplier port map(
-        a11 => inv11, a12 => inv12, a21 => inv21, a22 => inv22,
-        b11 => xty1, b12 => (others => '0'), b21 => xty2, b22 => (others => '0'),
-        c11 => b1, c12 => open, c21 => b2, c22 => open
-    );
+            if i > LINES_LENGTH then
+                i := 1;
+                j := 1;
+            end if;		
+        end if;
+    end process output_debug;
+
+    -- Habilita a transmissão quando não estiver em transmissão inicial
+    tx_ena <= not init_transmission;
+
+    -- Processo para enviar dados através do UART
+    send_results: process
+        variable i, j: integer := 1;
+    begin
+        wait until tx_done = '1';
+        tx_data <= B(i,j)(7 downto 0);
+        j := j + 1;
+        if j > COLUMNS_LENGTH then
+            j := 1;
+            i := i + 1;
+        end if;
+
+        if i > LINES_LENGTH then
+            i := 1;
+            j := 1;
+        end if;	
+    end process send_results;
 
 end Behavioral;
