@@ -12,10 +12,10 @@ end MatrixTranspose;
 
 architecture Behavioral of MatrixTranspose is
 begin
-    -- Transposição de Matriz usando loop
-    loop_transpose: for i in 1 to LINES_LENGTH generate 
-        loop_transpose_1: for j in 1 to COLUMNS_LENGTH generate 
-            B(i, j) <= A(j, i);  -- Troca os elementos
-        end generate;
+    -- Processo de transposição da matriz usando loops aninhados
+    loop_transpose: for i in 1 to LINES_LENGTH generate
+        loop_transpose_1: for j in 1 to COLUMNS_LENGTH generate
+            B(i, j) <= A(j, i); -- Troca os elementos para transposição
+        end generate loop_transpose_1;
     end generate loop_transpose;
 end Behavioral;

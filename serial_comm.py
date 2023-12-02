@@ -1,5 +1,6 @@
 import serial
-import time
+
+NUMBER_BITS_WIDTH = 8
 
 # Configure the serial connection
 ser = serial.Serial(
@@ -16,20 +17,22 @@ if not ser.isOpen():
 
 try:
     while True:
-        # Prepare data to be sent - agora como um número de 8 bits
-        data_to_send = [1,2,2,3,4,4]  # Replace with your 8-bit integer data (0-255)
+        # Prepare data to be sent - agora como um número de 64 bits
+        data_to_send = [1, 2, 2, 3, 4, 4]  # Replace with your 64-bit integer data
 
         for num in data_to_send:
-            # Convertendo o número inteiro de 8 bits em um único byte
-            encoded_data = num.to_bytes(1, byteorder='big')
+            # Convertendo o número inteiro de 64 bits em um conjunto de bytes
+            encoded_data = num.to_bytes(int(NUMBER_BITS_WIDTH / 8), byteorder='big')
 
-            for byte in encoded_data:
-                # Convertendo cada byte em uma string binária
-                binary_representation = format(byte, '08b')
-                print(binary_representation)
+            # Send data in chunks of 8 bytes
+            for i in range(0, len(encoded_data), 8):
+                chunk = encoded_data[i:i+8]
+                ser.write(chunk)
 
-            # Send data
-            ser.write(encoded_data)
+                # Para propósitos de depuração, imprime a representação binária de cada chunk
+                for byte in chunk:
+                    binary_representation = format(byte, '08b')
+                    print(binary_representation)
 
 except KeyboardInterrupt:
     # Close the port when done

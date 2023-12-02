@@ -9,10 +9,9 @@ entity MatrixLinearRegression is
     PORT(
         clk               : IN  STD_LOGIC;  -- clock do sistema
         reset             : IN  STD_LOGIC;  -- reset assíncrono
-        init_transmission : IN  STD_LOGIC;
+        init_transmission : IN  STD_LOGIC;  -- inicia a transmissão
         rx                : IN  STD_LOGIC;  -- pino de recepção
-        tx                : OUT STD_LOGIC;  -- pino de transmissão
-        digit             : OUT STD_LOGIC_VECTOR(7 downto 0)
+        tx                : OUT STD_LOGIC   -- pino de transmissão
     );	
 end MatrixLinearRegression;
 
@@ -29,7 +28,7 @@ architecture Behavioral of MatrixLinearRegression is
             rx_error    : OUT STD_LOGIC;  -- erro de recepção detectado
             rx_data     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);  -- dados recebidos
             tx_busy     : OUT STD_LOGIC;  -- transmissão em progresso
-            tx_done     : OUT STD_LOGIC;
+            tx_done     : OUT STD_LOGIC;  -- transmissão finalizada
             tx          : OUT STD_LOGIC
         );
     end component;
@@ -43,14 +42,6 @@ architecture Behavioral of MatrixLinearRegression is
         );
     end component;
 
-    -- Componente para divisão de frequência
-    component FrequencyDivider is
-        port (
-            clk     : IN  STD_LOGIC;
-            div_out : OUT STD_LOGIC
-        );
-    end component;
-
     -- Sinais usados no design
     signal rx_data : STD_LOGIC_VECTOR(7 downto 0);
     signal tx_data : STD_LOGIC_VECTOR(7 downto 0);
@@ -59,13 +50,6 @@ architecture Behavioral of MatrixLinearRegression is
     -- Sinais para as matrizes X, Y e B
     signal X, Xr, Y, Yr, B : matrix_type;
 begin
-
-    -- Instância do divisor de frequência
-    freq: FrequencyDivider port map(
-        clk => clk,
-        div_out => new_clk
-    );
-
     -- Instância do componente de comunicação UART
     uart_comm: SerialUartCommunication port map(
         clk => clk,
@@ -144,25 +128,6 @@ begin
         Y => Y,
         B => B
     );
-
-    -- Processo para gerar saída digital baseada no resultado B
-    output_debug: process(new_clk)
-        variable i, j: integer := 1;
-    begin
-        if rising_edge(new_clk) then
-            digit <= B(i,j)(15 downto 8);
-            j := j + 1;
-            if j > COLUMNS_LENGTH then
-                j := 1;
-                i := i + 1;
-            end if;
-
-            if i > LINES_LENGTH then
-                i := 1;
-                j := 1;
-            end if;		
-        end if;
-    end process output_debug;
 
     -- Habilita a transmissão quando não estiver em transmissão inicial
     tx_ena <= not init_transmission;
