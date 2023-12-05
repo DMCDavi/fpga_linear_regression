@@ -1,6 +1,7 @@
 import serial
 
-NUMBER_BITS_WIDTH = 8
+NUMBER_BITS_WIDTH = 16
+FIXED_POINT_BASE = 10
 
 # Configure the serial connection
 ser = serial.Serial(
@@ -29,11 +30,11 @@ try:
                 incoming_data = ser.read(1)
                 buffer.extend(incoming_data)
 
-        # Converter os bytes em um único valor de 64 bits em little-endian
-        int_value_64bit = int.from_bytes(buffer, byteorder='little')
-        print("Received 64-bit number:", int_value_64bit)
-        # binary_representation = ' '.join(f'{bin(byte)[2:].zfill(8)}' for byte in buffer)
-        # print("Received bytes in binary:", binary_representation)
+        # Converter os bytes em um único valor em big-endian
+        int_value_64bit = int.from_bytes(buffer, byteorder='big', signed=True)
+        print("Received number:", int_value_64bit / FIXED_POINT_BASE)
+        binary_representation = ' '.join(f'{bin(byte)[2:].zfill(8)}' for byte in buffer)
+        print("Received bytes in binary:", binary_representation)
 
 except KeyboardInterrupt:
     # Close the port when done

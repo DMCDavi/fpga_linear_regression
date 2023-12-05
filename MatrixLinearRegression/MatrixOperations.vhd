@@ -7,7 +7,11 @@ entity MatrixOperations is
     Port (
         X : in matrix_type;   -- Matriz X
         Y : in matrix_type;   -- Vetor Y
-        B : out matrix_type   -- Resultado vetor B
+        B : out matrix_type;   -- Resultado vetor B
+		  XTOut : out matrix_type;
+		  XTXOut : out matrix_type;
+		  InvOut : out matrix_type;
+		  XTYOut : out matrix_type
     );
 end MatrixOperations;
 
@@ -71,5 +75,10 @@ begin
         B => XTY,
         C => B  -- Resultado final armazenado em B
     );
-
+	 
+	 XTOut <= XT;
+	 XTXOut <= XTX;
+	 InvOut <= Inv;
+	 XTYOut <= XTY;
+	 
 end Behavioral;

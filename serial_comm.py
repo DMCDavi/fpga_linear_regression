@@ -1,6 +1,7 @@
 import serial
 
-NUMBER_BITS_WIDTH = 8
+NUMBER_BITS_WIDTH = 16
+FIXED_POINT_BASE = 10
 
 # Configure the serial connection
 ser = serial.Serial(
@@ -18,11 +19,12 @@ if not ser.isOpen():
 try:
     while True:
         # Prepare data to be sent - agora como um número de 64 bits
-        data_to_send = [1, 2, 2, 3, 4, 4]  # Replace with your 64-bit integer data
+        data_to_send = [1, 2, 2, 3, 4, 4] 
+        # data_to_send = [2, 3, 1, 4, 5, 2]
 
         for num in data_to_send:
             # Convertendo o número inteiro de 64 bits em um conjunto de bytes
-            encoded_data = num.to_bytes(int(NUMBER_BITS_WIDTH / 8), byteorder='big')
+            encoded_data = (num * FIXED_POINT_BASE).to_bytes(int(NUMBER_BITS_WIDTH / 8), byteorder='big')
 
             # Send data in chunks of 8 bytes
             for i in range(0, len(encoded_data), 8):

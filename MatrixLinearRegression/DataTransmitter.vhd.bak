@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity DataTransmitter is
+    Port (
+        init_transmission : in std_logic;
+        tx_done : in std_logic;
+        tx_data : out std_logic_vector(7 downto 0)
+    );
+end DataTransmitter;
+
+architecture Behavioral of DataTransmitter is
+begin
+    -- Your existing code goes here
+end Behavioral;
