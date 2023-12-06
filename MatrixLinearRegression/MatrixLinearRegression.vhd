@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.MatrixPackage.all;
-use work.FixedPointOperations.all;
 
 -- Entidade para realizar operações de regressão linear com matrizes
 entity MatrixLinearRegression is
@@ -38,7 +37,35 @@ architecture Behavioral of MatrixLinearRegression is
         Port (
             X : in  matrix_type;   -- Matriz X
             Y : in  matrix_type;   -- Vetor Y
-            B : out matrix_type    -- Resultado vetor B
+            B : out matrix_type;    -- Resultado vetor B
+			   XTOut : out matrix_type;
+			   XTXOut : out matrix_type;
+			   InvOut : out matrix_type;
+			   XTYOut : out matrix_type
+        );
+    end component;
+	 
+	 component DataTransmitter
+        port(
+			   X : in matrix_type;
+			   Y : in matrix_type;
+			   B : in matrix_type;
+			   XT : in matrix_type;
+			   XTX : in matrix_type;
+			   Inv : in matrix_type;
+			   XTY : in matrix_type;
+            tx_done : in std_logic;
+            tx_data : out std_logic_vector(7 downto 0)
+        );
+    end component;
+	 
+	 component DataReceiver
+        port(
+            rx_ready : in std_logic;
+            rx_data : in std_logic_vector(7 downto 0);
+            reset : in std_logic;
+            X : out matrix_type;
+            Y : out matrix_type
         );
     end component;
 
@@ -48,7 +75,7 @@ architecture Behavioral of MatrixLinearRegression is
     signal tx_busy, rx_ready, tx_ena, new_clk, tx_done : STD_LOGIC;
 
     -- Sinais para as matrizes X, Y e B
-    signal X, Xr, Y, Yr, B : matrix_type;
+    signal X, Xr, Y, Yr, B, XT, XTX, Inv, XTY : matrix_type;
 begin
     -- Instância do componente de comunicação UART
     uart_comm: SerialUartCommunication port map(
@@ -64,90 +91,40 @@ begin
         tx_ena => tx_ena
     );
 
-    -- Processo para tratamento de dados recebidos
-    receive_data: process(rx_ready, reset)
-        variable i, j, z, index: integer := 1;
-    begin
-        if reset = '0' then
-            -- Inicializa as matrizes e variáveis
-            Yr <= (others => (others => (others => '0')));
-            Xr <= (others => (others => (others => '0')));
-            i := 1; j := 1; z := 1; index := 1;
-        else
-            if rx_ready'EVENT AND rx_ready = '1' then
-                -- Armazena os dados recebidos nas matrizes Xr e Yr
-                if index mod (COLUMNS_LENGTH + 1) = 0 then
-                    Yr(z,1) <= std_logic_vector(resize(signed(rx_data), NUMBER_BITS_WIDTH));
-                    z := z + 1;
-                    if z > LINES_LENGTH then
-                        z := 1;
-                    end if;
-                else
-                    Xr(i,j) <= std_logic_vector(resize(signed(rx_data), NUMBER_BITS_WIDTH));
-                    j := j + 1;
-                    if j > COLUMNS_LENGTH then
-                        j := 1;
-                        i := i + 1;
-                    end if;
-
-                    if i > LINES_LENGTH then
-                        i := 1;
-                        j := 1;
-                    end if;
-                end if;
-                index := index + 1;
-            end if;
-        end if;
-    end process receive_data;
-
-    -- Processo para conversão de dados para o formato de ponto fixo
-    covertion_to_fixed: process(Xr, Yr, reset)
-    begin
-        if reset = '0' then
-            -- Inicializa as matrizes X e Y
-            Y <= (others => (others => (others => '0')));
-            X <= (others => (others => (others => '0')));
-        else
-            -- Converte e armazena os dados em ponto fixo
-            for i in 1 to LINES_LENGTH loop
-                for j in 1 to COLUMNS_LENGTH loop
-                    X(i,j) <= to_fixed_point_std(Xr(i,j));
-                    if j = 1 then
-                        Y(i,j) <= to_fixed_point_std(Yr(i,j));
-                    else
-                        Y(i,j) <= (others => '0');
-                    end if;
-                end loop;
-            end loop;
-        end if;
-    end process covertion_to_fixed;
+    dr : DataReceiver
+        port map(
+            rx_ready => rx_ready,
+            rx_data => rx_data,
+            reset => reset,
+            X => X,
+            Y => Y
+        );
 
     -- Instância do componente de operações de matriz
     mo: MatrixOperations port map(
         X => X,
         Y => Y,
-        B => B
+        B => B,
+		  XTOut => XT,
+		  XTXOut => XTX,
+		  InvOut => Inv,
+		  XTYOut => XTY
     );
 
     -- Habilita a transmissão quando não estiver em transmissão inicial
     tx_ena <= not init_transmission;
 
-    -- Processo para enviar dados através do UART
-    send_results: process
-        variable i, j: integer := 1;
-    begin
-        wait until tx_done = '1';
-        tx_data <= B(i,j)(7 downto 0);
-        j := j + 1;
-        if j > COLUMNS_LENGTH then
-            j := 1;
-            i := i + 1;
-        end if;
-
-        if i > LINES_LENGTH then
-            i := 1;
-            j := 1;
-        end if;	
-    end process send_results;
+    dt: DataTransmitter
+			port map(
+				 X => X,
+				 Y => Y,
+				 B => B,
+				 XT => XT,
+				 XTX => XTX,
+				 Inv => Inv,
+				 XTY => XTY,
+				 tx_done => tx_done,
+				 tx_data => tx_data
+			);
 
 end Behavioral;
